@@ -103,7 +103,7 @@ nav a:hover, nav a.active {
     color: #E2E8F0;
 }
 
-/* Bold Mission Statement - Updated for a more pleasing look */
+/* Bold Mission Statement - Clean White Background */
 .mission-statement {
     background-color: var(--white);
     color: var(--navy-dark);
@@ -154,108 +154,4 @@ nav a:hover, nav a.active {
 
 /* Accessible Cards */
 .card {
-    background: var(--light-gray);
-    padding: 40px;
-    border-radius: 12px;
-    border-top: 8px solid var(--bright-coral);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card.solution-card {
-    border-top-color: var(--electric-blue);
-    background-color: #E6F0FF; /* Very light electric blue */
-}
-
-.card h3 {
-    color: var(--navy-dark);
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.card p {
-    font-size: 1.1rem;
-    color: var(--text-main);
-}
-
-/* Team Grid Styling */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-}
-
-.team-card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    border: 2px solid #E2E8F0;
-    border-bottom: 8px solid var(--electric-blue);
-}
-
-.team-card h3 {
-    color: var(--navy-dark);
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.team-card h4 {
-    color: var(--bright-coral);
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.team-card p {
-    font-size: 1.1rem;
-}
-
-/* Image Placeholders */
-.media-insert {
-    margin: 60px 0;
-    text-align: center;
-}
-
-/* Footer */
-footer {
-    background-color: var(--navy-dark);
-    color: var(--white);
-    padding: 80px 5% 40px;
-    text-align: center;
-}
-
-footer a.contact-link {
-    display: inline-block;
-    background-color: var(--bright-coral);
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 50px;
-    transition: background-color 0.2s ease;
-}
-
-footer a.contact-link:hover {
-    background-color: #E0284A;
-}
-
-.copyright {
-    margin-top: 60px;
-    font-size: 1rem;
-    color: #A0AEC0;
-}
-
-@media (max-width: 768px) {
-    .hero h2 { font-size: 2.5rem; }
-    .hero p { font-size: 1.2rem; }
-    .section-header h2 { font-size: 2.2rem; }
-    header { flex-direction: column; gap: 20px; text-align: center; }
-}
+    background:
