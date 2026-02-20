@@ -1,11 +1,13 @@
-/* High-Impact Color Palette */
+/* Sophisticated Blue & Green Palette */
 :root {
-    --primary-blue: #7193ab; /* Extracted from logo roots */
-    --primary-green: #8ab484; /* Extracted from logo leaves */
-    --dark-blue: #2c4251; /* Deeper contrast for text */
-    --bg-light: #f8faf9;
+    --primary-blue: #1A5F7A; /* Deep, professional blue */
+    --primary-green: #22C55E; /* Vibrant, health-focused green */
+    --dark-blue: #113f52; 
+    --light-green: #eaf8f0;
+    --bg-light: #f4f7f9;
     --white: #ffffff;
-    --text-dark: #333333;
+    --text-dark: #334155;
+    --text-muted: #64748b;
 }
 
 * {
@@ -21,7 +23,7 @@ body {
     background-color: var(--bg-light);
 }
 
-/* Header Styling */
+/* Navigation & Header */
 header {
     background-color: var(--white);
     padding: 15px 5%;
@@ -41,57 +43,63 @@ header {
 }
 
 .logo-container img {
-    max-width: 90px;
+    max-width: 80px;
     height: auto;
 }
 
 .logo-container h1 {
-    color: var(--dark-blue);
-    font-size: 1.6rem;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-green);
+}
+
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
     color: var(--white);
     padding: 100px 5%;
     text-align: center;
     position: relative;
-    overflow: hidden;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: var(--bg-light);
-    transform: skewY(-3deg);
+    border-bottom: 8px solid var(--primary-green);
 }
 
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
-    z-index: 10;
 }
 
 .hero h2 {
     font-size: 2.8rem;
     margin-bottom: 25px;
-    color: var(--primary-green);
+    color: var(--white);
 }
 
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 20px;
+    color: #e2e8f0;
 }
 
-/* New Mission Statement Styling */
+/* Mission Statement */
 .mission-statement {
     background-color: rgba(255, 255, 255, 0.1);
     border-left: 4px solid var(--primary-green);
@@ -102,6 +110,7 @@ header {
     font-style: italic;
     line-height: 1.8;
     text-align: left;
+    backdrop-filter: blur(5px);
 }
 
 .mission-statement strong {
@@ -114,7 +123,7 @@ header {
     font-style: normal;
 }
 
-/* Container & Grid Layouts */
+/* Layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,7 +136,7 @@ header {
 }
 
 .section-header h2 {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     font-size: 2.5rem;
     display: inline-block;
     position: relative;
@@ -150,12 +159,12 @@ header {
     gap: 30px;
 }
 
-/* Card Styling */
+/* Informative Cards */
 .card {
     background: var(--white);
     padding: 40px 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     transition: transform 0.3s ease;
     border-top: 5px solid var(--primary-blue);
 }
@@ -166,69 +175,16 @@ header {
 
 .card.solution-card {
     border-top-color: var(--primary-green);
+    background-color: var(--light-green);
 }
 
 .card h3 {
-    color: var(--dark-blue);
+    color: var(--primary-blue);
     font-size: 1.4rem;
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #555;
-    font-size: 1.05rem;
-}
-
-.media-insert {
-    text-align: center;
-    margin: 40px auto;
-}
-
-/* Footer */
-footer {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    padding: 60px 5% 30px;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.footer-content h3 {
-    color: var(--primary-green);
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-.footer-content p {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.footer-content a {
-    color: var(--primary-green);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-.copyright {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .hero h2 { font-size: 2.2rem; }
-    .section-header h2 { font-size: 2rem; }
-    .logo-container h1 { font-size: 1.2rem; }
-    .mission-statement { font-size: 1.1rem; }
-}
+/* Team Grid Styling */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30
