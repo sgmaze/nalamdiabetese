@@ -3,7 +3,7 @@
     --navy-dark: #0A1128;       /* High contrast text and footers */
     --bright-coral: #FF3B5C;    /* Energetic, urgent accent color */
     --electric-blue: #0070F3;   /* Trustworthy but bright primary */
-    --vivid-yellow: #FFD166;    /* Highlight color for mission */
+    --vivid-yellow: #FFD166;    /* Highlight color for accents */
     --white: #FFFFFF;
     --light-gray: #F4F7F6;
     --text-main: #1A1A1A;
@@ -103,9 +103,9 @@ nav a:hover, nav a.active {
     color: #E2E8F0;
 }
 
-/* Bold Mission Statement */
+/* Bold Mission Statement - Updated for a more pleasing look */
 .mission-statement {
-    background-color: var(--vivid-yellow);
+    background-color: var(--white);
     color: var(--navy-dark);
     padding: 40px;
     border-radius: 8px;
@@ -113,7 +113,7 @@ nav a:hover, nav a.active {
     font-weight: 700;
     line-height: 1.4;
     border-left: 8px solid var(--bright-coral);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .mission-statement strong {
@@ -122,7 +122,7 @@ nav a:hover, nav a.active {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    color: var(--bright-coral);
+    color: var(--electric-blue);
 }
 
 /* Layout & Typography */
