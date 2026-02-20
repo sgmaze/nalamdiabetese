@@ -4,226 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nalam Diabetic Prevention Trust</title>
-    <style>
-        /* High-Impact Color Palette */
-        :root {
-            --primary-blue: #7193ab; /* Extracted from logo roots */
-            --primary-green: #8ab484; /* Extracted from logo leaves */
-            --dark-blue: #2c4251; /* Deeper contrast for text */
-            --bg-light: #f8faf9;
-            --white: #ffffff;
-            --text-dark: #333333;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-        }
-
-        /* Header Styling */
-        header {
-            background-color: var(--white);
-            padding: 15px 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-container img {
-            max-width: 90px;
-            height: auto;
-        }
-
-        .logo-container h1 {
-            color: var(--dark-blue);
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
-            color: var(--white);
-            padding: 100px 5%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: var(--bg-light);
-            transform: skewY(-3deg);
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            color: var(--primary-green);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-        }
-
-        /* Container & Grid Layouts */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 5%;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            color: var(--dark-blue);
-            font-size: 2.5rem;
-            display: inline-block;
-            position: relative;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            width: 60%;
-            height: 4px;
-            background-color: var(--primary-green);
-            bottom: -10px;
-            left: 20%;
-            border-radius: 2px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        /* Card Styling */
-        .card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease;
-            border-top: 5px solid var(--primary-blue);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card.solution-card {
-            border-top-color: var(--primary-green);
-        }
-
-        .card h3 {
-            color: var(--dark-blue);
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #555;
-            font-size: 1.05rem;
-        }
-
-        /* Image Placeholder Tags */
-        .media-insert {
-            background-color: #e2e8f0;
-            color: #64748b;
-            text-align: center;
-            padding: 40px 20px;
-            border-radius: 8px;
-            margin: 40px auto;
-            font-style: italic;
-            border: 2px dashed #cbd5e1;
-            max-width: 800px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-blue);
-            color: var(--white);
-            padding: 60px 5% 30px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer-content h3 {
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .footer-content p {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .footer-content a {
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
-
-        .copyright {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h2 { font-size: 2.2rem; }
-            .section-header h2 { font-size: 2rem; }
-            .logo-container h1 { font-size: 1.2rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -237,15 +18,16 @@
     <section class="hero">
         <div class="hero-content">
             <h2>Bridging the Healthcare Gap in Coimbatore</h2>
-            [cite_start]<p>Nalam Diabetic Prevention Trust is a student-led non-profit initiative dedicated to combating the diabetes epidemic in Tamil Nadu, India. [cite: 4]</p>
-            [cite_start]<p>Founded by students with deep family roots in Coimbatore, the trust seeks to bridge the gap in healthcare through early detection, prevention, and community awareness. [cite: 5]</p>
+            <p>Nalam Diabetic Prevention Trust is a student-led non-profit initiative dedicated to combating the diabetes epidemic in Tamil Nadu, India.</p>
+            <p>Founded by students with deep family roots in Coimbatore, the trust seeks to bridge the gap in healthcare through early detection, prevention, and community awareness.</p>
         </div>
     </section>
 
     <div class="container">
         
         <div class="media-insert">
-                    </div>
+            
+        </div>
 
         <section id="problem">
             <div class="section-header">
@@ -254,21 +36,22 @@
             <div class="grid-3">
                 <div class="card">
                     <h3>Late Detection</h3>
-                    [cite_start]<p>Many residents in the Coimbatore region only discover they are diabetic after complications arise. [cite: 8]</p>
+                    <p>Many residents in the Coimbatore region only discover they are diabetic after complications arise.</p>
                 </div>
                 <div class="card">
                     <h3>Lack of Prioritization</h3>
-                    [cite_start]<p>Regular preventative testing (like A1C) is not a common practice due to costs and lack of awareness. [cite: 9]</p>
+                    <p>Regular preventative testing (like A1C) is not a common practice due to costs and lack of awareness.</p>
                 </div>
                 <div class="card">
                     <h3>Cultural & Language Barriers</h3>
-                    [cite_start]<p>Health information is often not available in accessible Tamil-language formats that resonate with local dietary and lifestyle habits. [cite: 10]</p>
+                    <p>Health information is often not available in accessible Tamil-language formats that resonate with local dietary and lifestyle habits.</p>
                 </div>
             </div>
         </section>
 
         <div class="media-insert" style="margin-top: 80px;">
-                    </div>
+            
+        </div>
 
         <section id="solution" style="margin-top: 40px;">
             <div class="section-header">
@@ -277,15 +60,15 @@
             <div class="grid-3">
                 <div class="card solution-card">
                     <h3>Free A1C Testing</h3>
-                    [cite_start]<p>Partnering with a vetted local Coimbatore laboratory to provide gold-standard testing for blood sugar levels. [cite: 19]</p>
+                    <p>Partnering with a vetted local Coimbatore laboratory to provide gold-standard testing for blood sugar levels.</p>
                 </div>
                 <div class="card solution-card">
                     <h3>Targeted Education</h3>
-                    [cite_start]<p>Providing immediate, bilingual (Tamil/English) guidance on nutrition, local foods to eat/avoid, and exercise routines. [cite: 20]</p>
+                    <p>Providing immediate, bilingual (Tamil/English) guidance on nutrition, local foods to eat/avoid, and exercise routines.</p>
                 </div>
                 <div class="card solution-card">
                     <h3>Data-Driven Follow-up</h3>
-                    [cite_start]<p>Using a WhatsApp-based system to track high-risk individuals and remind them to return for a 3 or 6 month re-test depending on their risk level. [cite: 21]</p>
+                    <p>Using a WhatsApp-based system to track high-risk individuals and remind them to return for a 3 or 6 month re-test depending on their risk level.</p>
                 </div>
             </div>
         </section>
@@ -294,10 +77,10 @@
     <footer>
         <div class="footer-content">
             <h3>Get in Touch</h3>
-            [cite_start]<p><strong>Trust official contact details:</strong> <a href="mailto:nalamdiabetictrust@gmail.com">nalamdiabetictrust@gmail.com</a> [cite: 48]</p>
+            <p><strong>Trust official contact details:</strong> <a href="mailto:nalamdiabetictrust@gmail.com">nalamdiabetictrust@gmail.com</a></p>
             <p><strong>Location:</strong> Coimbatore, India</p>
             <div class="copyright">
-                [cite_start]<p>Established: 2026 [cite: 49] | &copy; Nalam Diabetic Prevention Trust.</p>
+                <p>Established: 2026 | &copy; Nalam Diabetic Prevention Trust.</p>
             </div>
         </div>
     </footer>
