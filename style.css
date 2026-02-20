@@ -91,6 +91,29 @@ header {
     margin-bottom: 20px;
 }
 
+/* New Mission Statement Styling */
+.mission-statement {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid var(--primary-green);
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.mission-statement strong {
+    color: var(--primary-green);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+
 /* Container & Grid Layouts */
 .container {
     max-width: 1200px;
@@ -207,4 +230,5 @@ footer {
     .hero h2 { font-size: 2.2rem; }
     .section-header h2 { font-size: 2rem; }
     .logo-container h1 { font-size: 1.2rem; }
+    .mission-statement { font-size: 1.1rem; }
 }
