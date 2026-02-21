@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){try{var l=localStorage.getItem('nalam-lang');if(l==='ta'){document.documentElement.lang='ta';document.documentElement.classList.add('i18n-loading')}}catch(e){}})()</script>
     <title>Our Programs - Nalam Diabetes Prevention Foundation</title>
     <meta name="description" content="Learn about the Nalam Model: free A1C testing clinics, bilingual health education, and data-driven follow-up for diabetes prevention in Coimbatore.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +12,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+              sans: ['Inter', 'Noto Sans Tamil', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
           }
         }
@@ -19,9 +20,10 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
+    <script src="i18n.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
 
@@ -30,19 +32,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
-                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
-                    <span class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Prevention Foundation</span>
+                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" data-i18n-alt="common.alt.logo" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
+                    <span data-i18n="common.header.orgName" class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Prevention Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
-                    <a href="programs.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
-                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                    <a href="index.html" data-i18n="common.nav.home" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
+                    <a href="about.html" data-i18n="common.nav.about" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="programs.html" data-i18n="common.nav.programs" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
+                    <a href="team.html" data-i18n="common.nav.team" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
+                    <button class="lang-toggle inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 hover:border-emerald-300 transition-colors text-sm" aria-label="Switch to Tamil">
+                        <span class="lang-en font-bold text-emerald-600">EN</span>
+                        <span class="text-slate-300">|</span>
+                        <span class="lang-ta text-slate-400">தமிழ்</span>
+                    </button>
+                    <a href="get-involved.html" data-i18n="common.nav.getInvolved" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
                         Get Involved
                     </a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu" data-i18n-aria="common.mobile.toggleMenu">
                     <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -51,11 +58,16 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+                <button class="lang-toggle w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-slate-50 border border-slate-200 text-sm mb-2" aria-label="Switch to Tamil">
+                    <span class="lang-en font-bold text-emerald-600">EN</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="lang-ta text-slate-400">தமிழ்</span>
+                </button>
+                <a href="index.html" data-i18n="common.nav.home" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="about.html" data-i18n="common.nav.about" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" data-i18n="common.nav.programs" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Our Work</a>
+                <a href="team.html" data-i18n="common.nav.team" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" data-i18n="common.nav.getInvolved" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
             </div>
         </div>
     </header>
@@ -63,11 +75,11 @@
     <!-- Page Hero -->
     <section class="bg-slate-900 pt-28 pb-16 lg:pt-44 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Our Work</p>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+            <p data-i18n="programs.hero.sectionLabel" class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Our Work</p>
+            <h1 data-i18n="programs.hero.title" class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 The Nalam Model
             </h1>
-            <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            <p data-i18n="programs.hero.subtitle" class="text-lg text-slate-400 max-w-2xl leading-relaxed">
                 A comprehensive approach to diabetes prevention through free testing, targeted education, and community-driven follow-up.
             </p>
         </div>
@@ -77,11 +89,11 @@
     <section class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Process</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p data-i18n="programs.process.sectionLabel" class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Process</p>
+                <h2 data-i18n="programs.process.title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     How It Works
                 </h2>
-                <p class="mt-4 text-lg text-slate-500">
+                <p data-i18n="programs.process.subtitle" class="mt-4 text-lg text-slate-500">
                     From community outreach to lasting health outcomes, here's the journey of every individual we serve.
                 </p>
             </div>
@@ -95,8 +107,8 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">1</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
-                                <h3 class="text-lg font-bold text-slate-900 mb-2">Community Outreach</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">
+                                <h3 data-i18n="programs.process.step1Title" class="text-lg font-bold text-slate-900 mb-2">Community Outreach</h3>
+                                <p data-i18n="programs.process.step1Text" class="text-slate-500 text-sm leading-relaxed">
                                     We coordinate with Village Panchayats, local clubs, and community leaders to identify high-need areas and schedule clinic events. WhatsApp and social media campaigns spread the word in Tamil and English.
                                 </p>
                             </div>
@@ -105,8 +117,8 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">2</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
-                                <h3 class="text-lg font-bold text-slate-900 mb-2">Free A1C Testing</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">
+                                <h3 data-i18n="programs.process.step2Title" class="text-lg font-bold text-slate-900 mb-2">Free A1C Testing</h3>
+                                <p data-i18n="programs.process.step2Text" class="text-slate-500 text-sm leading-relaxed">
                                     At each clinic, individuals receive a free A1C blood test through our vetted local laboratory partner. The A1C test measures average blood sugar levels over the past 2-3 months &mdash; the gold standard for diabetes screening.
                                 </p>
                             </div>
@@ -115,8 +127,8 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">3</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
-                                <h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Health Guidance</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">
+                                <h3 data-i18n="programs.process.step3Title" class="text-lg font-bold text-slate-900 mb-2">Personalized Health Guidance</h3>
+                                <p data-i18n="programs.process.step3Text" class="text-slate-500 text-sm leading-relaxed">
                                     Each participant receives immediate, bilingual guidance based on their results. This includes practical advice on local foods to eat and avoid, exercise routines suited to their lifestyle, and understanding their risk level.
                                 </p>
                             </div>
@@ -125,8 +137,8 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">4</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
-                                <h3 class="text-lg font-bold text-slate-900 mb-2">Data-Driven Follow-up</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">
+                                <h3 data-i18n="programs.process.step4Title" class="text-lg font-bold text-slate-900 mb-2">Data-Driven Follow-up</h3>
+                                <p data-i18n="programs.process.step4Text" class="text-slate-500 text-sm leading-relaxed">
                                     High-risk individuals are enrolled in our WhatsApp-based follow-up system. They receive automated reminders for 3 or 6-month re-testing depending on their risk level, plus ongoing health tips and preventive care information.
                                 </p>
                             </div>
@@ -135,8 +147,8 @@
                         <div class="flex gap-6 items-start">
                             <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">5</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
-                                <h3 class="text-lg font-bold text-slate-900 mb-2">Trend Analysis & Reporting</h3>
-                                <p class="text-slate-500 text-sm leading-relaxed">
+                                <h3 data-i18n="programs.process.step5Title" class="text-lg font-bold text-slate-900 mb-2">Trend Analysis & Reporting</h3>
+                                <p data-i18n="programs.process.step5Text" class="text-slate-500 text-sm leading-relaxed">
                                     Anonymized data from all clinics is collected and analyzed to identify regional trends. Reports are shared with local health authorities to help them understand the diabetes landscape in Coimbatore villages.
                                 </p>
                             </div>
@@ -151,8 +163,8 @@
     <section class="py-20 lg:py-28 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Programs</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p data-i18n="programs.core.sectionLabel" class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Programs</p>
+                <h2 data-i18n="programs.core.title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Our Core Programs
                 </h2>
             </div>
@@ -166,25 +178,25 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Free A1C Testing Clinics</h3>
-                            <p class="text-emerald-600 text-sm font-medium mt-1">25+ events per year</p>
+                            <h3 data-i18n="programs.core.prog1Title" class="text-xl font-bold text-slate-900">Free A1C Testing Clinics</h3>
+                            <p data-i18n="programs.core.prog1Badge" class="text-emerald-600 text-sm font-medium mt-1">25+ events per year</p>
                         </div>
                     </div>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <p data-i18n="programs.core.prog1Text" class="text-slate-500 leading-relaxed mb-4">
                         Our flagship program partners with vetted local Coimbatore laboratories to provide gold-standard A1C blood sugar testing at no cost to participants. We negotiate bulk testing rates to maximize the impact of every dollar raised.
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Gold-standard A1C blood testing
+                            <span data-i18n="programs.core.prog1Item1">Gold-standard A1C blood testing</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Vetted local laboratory partnership
+                            <span data-i18n="programs.core.prog1Item2">Vetted local laboratory partnership</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Completely free for all participants
+                            <span data-i18n="programs.core.prog1Item3">Completely free for all participants</span>
                         </li>
                     </ul>
                 </div>
@@ -197,25 +209,25 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Bilingual Health Education</h3>
-                            <p class="text-amber-600 text-sm font-medium mt-1">Tamil & English</p>
+                            <h3 data-i18n="programs.core.prog2Title" class="text-xl font-bold text-slate-900">Bilingual Health Education</h3>
+                            <p data-i18n="programs.core.prog2Badge" class="text-amber-600 text-sm font-medium mt-1">Tamil & English</p>
                         </div>
                     </div>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <p data-i18n="programs.core.prog2Text" class="text-slate-500 leading-relaxed mb-4">
                         We design and distribute educational materials that translate complex medical advice into practical, local lifestyle changes. Every resource is available in both Tamil and English to reach the widest possible audience.
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Nutrition guidance with local food recommendations
+                            <span data-i18n="programs.core.prog2Item1">Nutrition guidance with local food recommendations</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Exercise routines adapted to community lifestyles
+                            <span data-i18n="programs.core.prog2Item2">Exercise routines adapted to community lifestyles</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Printed pamphlets and digital resources
+                            <span data-i18n="programs.core.prog2Item3">Printed pamphlets and digital resources</span>
                         </li>
                     </ul>
                 </div>
@@ -228,25 +240,25 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">WhatsApp Follow-up System</h3>
-                            <p class="text-cyan-600 text-sm font-medium mt-1">Automated reminders</p>
+                            <h3 data-i18n="programs.core.prog3Title" class="text-xl font-bold text-slate-900">WhatsApp Follow-up System</h3>
+                            <p data-i18n="programs.core.prog3Badge" class="text-cyan-600 text-sm font-medium mt-1">Automated reminders</p>
                         </div>
                     </div>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <p data-i18n="programs.core.prog3Text" class="text-slate-500 leading-relaxed mb-4">
                         Our technology-driven follow-up system uses WhatsApp &mdash; the most widely used messaging platform in India &mdash; to keep high-risk individuals engaged with their health journey.
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            3 or 6-month re-test reminders based on risk
+                            <span data-i18n="programs.core.prog3Item1">3 or 6-month re-test reminders based on risk</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Ongoing preventive health tips
+                            <span data-i18n="programs.core.prog3Item2">Ongoing preventive health tips</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-cyan-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Trend monitoring for early intervention
+                            <span data-i18n="programs.core.prog3Item3">Trend monitoring for early intervention</span>
                         </li>
                     </ul>
                 </div>
@@ -259,25 +271,25 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Local Governance Partnership</h3>
-                            <p class="text-violet-600 text-sm font-medium mt-1">Village-level coordination</p>
+                            <h3 data-i18n="programs.core.prog4Title" class="text-xl font-bold text-slate-900">Local Governance Partnership</h3>
+                            <p data-i18n="programs.core.prog4Badge" class="text-violet-600 text-sm font-medium mt-1">Village-level coordination</p>
                         </div>
                     </div>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <p data-i18n="programs.core.prog4Text" class="text-slate-500 leading-relaxed mb-4">
                         We work directly with Village Panchayats, local clubs, and community leaders to organize clinics where they're needed most. This ground-up approach ensures trust and high participation rates.
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-violet-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Direct coordination with Village Panchayats
+                            <span data-i18n="programs.core.prog4Item1">Direct coordination with Village Panchayats</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-violet-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Focus on high-need rural areas
+                            <span data-i18n="programs.core.prog4Item2">Focus on high-need rural areas</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
                             <svg class="w-4 h-4 text-violet-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                            Data shared with local health authorities
+                            <span data-i18n="programs.core.prog4Item3">Data shared with local health authorities</span>
                         </li>
                     </ul>
                 </div>
@@ -288,13 +300,13 @@
     <!-- CTA -->
     <section class="py-20 lg:py-28 bg-gradient-to-br from-emerald-700 to-teal-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+            <h2 data-i18n="programs.cta.title" class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
                 Help Us Reach More Communities
             </h2>
-            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p data-i18n="programs.cta.subtitle" class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
                 Every clinic we run, every test we provide, and every life we touch is made possible by supporters like you.
             </p>
-            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+            <a href="get-involved.html" data-i18n="programs.cta.button" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
                 Support Our Programs
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -307,24 +319,24 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain">
-                        <span class="text-lg font-bold">Nalam Diabetes Prevention Foundation</span>
+                        <img src="logo.png" alt="Nalam" data-i18n-alt="common.alt.logoSmall" class="h-10 w-10 object-contain">
+                        <span data-i18n="common.footer.orgName" class="text-lg font-bold">Nalam Diabetes Prevention Foundation</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p data-i18n="common.footer.orgDescription" class="text-slate-400 text-sm leading-relaxed">
                         A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <h4 data-i18n="common.footer.quickLinks" class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="about.html" data-i18n="common.footer.aboutUs" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" data-i18n="common.footer.ourPrograms" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" data-i18n="common.footer.ourTeam" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" data-i18n="common.footer.getInvolved" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <h4 data-i18n="common.footer.contact" class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
                             <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
@@ -334,13 +346,13 @@
                         </li>
                         <li class="text-slate-400 text-sm flex items-center gap-2">
                             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Coimbatore, Tamil Nadu, India
+                            <span data-i18n="common.footer.location">Coimbatore, Tamil Nadu, India</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-12 pt-8 text-center">
-                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
+                <p data-i18n="common.footer.copyright" class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>

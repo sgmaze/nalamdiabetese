@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){try{var l=localStorage.getItem('nalam-lang');if(l==='ta'){document.documentElement.lang='ta';document.documentElement.classList.add('i18n-loading')}}catch(e){}})()</script>
     <title>Nalam Diabetes Prevention Foundation - Preventing Diabetes in Coimbatore</title>
     <meta name="description" content="A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through free A1C testing, bilingual health education, and community outreach.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +12,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+              sans: ['Inter', 'Noto Sans Tamil', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
           }
         }
@@ -19,9 +20,10 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
+    <script src="i18n.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
 
@@ -30,19 +32,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
-                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
-                    <span class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Prevention Foundation</span>
+                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain" data-i18n-alt="common.alt.logo">
+                    <span class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight" data-i18n="common.header.orgName">Nalam Diabetes Prevention Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
-                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
-                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                    <a href="index.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors" data-i18n="common.nav.home">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors" data-i18n="common.nav.about">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors" data-i18n="common.nav.programs">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors" data-i18n="common.nav.team">Team</a>
+                    <button class="lang-toggle inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 hover:border-emerald-300 transition-colors text-sm" aria-label="Switch to Tamil">
+                        <span class="lang-en font-bold text-emerald-600">EN</span>
+                        <span class="text-slate-300">|</span>
+                        <span class="lang-ta text-slate-400">தமிழ்</span>
+                    </button>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm" data-i18n="common.nav.getInvolved">
                         Get Involved
                     </a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu" data-i18n-aria="common.mobile.toggleMenu">
                     <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -51,11 +58,16 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Home</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+                <button class="lang-toggle w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-slate-50 border border-slate-200 text-sm mb-2" aria-label="Switch to Tamil">
+                    <span class="lang-en font-bold text-emerald-600">EN</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="lang-ta text-slate-400">தமிழ்</span>
+                </button>
+                <a href="index.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50" data-i18n="common.nav.home">Home</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50" data-i18n="common.nav.about">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50" data-i18n="common.nav.programs">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50" data-i18n="common.nav.team">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2" data-i18n="common.nav.getInvolved">Get Involved</a>
             </div>
         </div>
     </header>
@@ -68,23 +80,23 @@
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 bg-emerald-700/40 text-emerald-200 text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-emerald-600/30">
+                <div class="inline-flex items-center gap-2 bg-emerald-700/40 text-emerald-200 text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-emerald-600/30" data-i18n-html="home.hero.badge">
                     <span class="w-2 h-2 bg-emerald-400 rounded-full pulse-dot"></span>
                     Student-Led Initiative &bull; Launching May 2026
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6" data-i18n-html="home.hero.title">
                     Preventing Diabetes,<br>
                     <span class="text-emerald-300">One Community at a Time</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-emerald-100/80 max-w-2xl mb-10 leading-relaxed">
+                <p class="text-lg sm:text-xl text-emerald-100/80 max-w-2xl mb-10 leading-relaxed" data-i18n="home.hero.description">
                     Free A1C testing, bilingual health education, and data-driven follow-up for the communities of Coimbatore, Tamil Nadu.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="programs.html" class="inline-flex items-center px-7 py-3.5 bg-white text-emerald-900 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg shadow-emerald-900/20 text-sm">
-                        Our Programs
+                        <span data-i18n="home.hero.ctaPrograms">Our Programs</span>
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="get-involved.html" class="inline-flex items-center px-7 py-3.5 border-2 border-emerald-400/30 text-white font-semibold rounded-full hover:bg-emerald-800/50 transition-all text-sm">
+                    <a href="get-involved.html" class="inline-flex items-center px-7 py-3.5 border-2 border-emerald-400/30 text-white font-semibold rounded-full hover:bg-emerald-800/50 transition-all text-sm" data-i18n="home.hero.ctaGetInvolved">
                         Get Involved
                     </a>
                 </div>
@@ -98,20 +110,20 @@
             <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">25+</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">Free Clinics Per Year</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600" data-i18n="home.stats.clinicsValue">25+</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium" data-i18n="home.stats.clinicsLabel">Free Clinics Per Year</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">5</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">Student Founders</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600" data-i18n="home.stats.foundersValue">5</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium" data-i18n="home.stats.foundersLabel">Student Founders</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Free</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">A1C Blood Testing</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600" data-i18n="home.stats.testingValue">Free</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium" data-i18n="home.stats.testingLabel">A1C Blood Testing</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">2026</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">Foundation Launch</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600" data-i18n="home.stats.launchValue">2026</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium" data-i18n="home.stats.launchLabel">Foundation Launch</p>
                     </div>
                 </div>
             </div>
@@ -122,31 +134,31 @@
     <section class="py-16 lg:py-20 bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <p class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3">The Diabetes Crisis</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <p class="text-sm font-semibold text-red-400 uppercase tracking-wider mb-3" data-i18n="home.crisis.sectionLabel">The Diabetes Crisis</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="home.crisis.title">
                     India's Silent Epidemic
                 </h2>
             </div>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <div class="text-center bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-red-400">101M</p>
-                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug">Indians living with diabetes</p>
-                    <p class="text-xs text-slate-500 mt-1">ICMR-INDIAB Study</p>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-red-400" data-i18n="home.crisis.stat1Value">101M</p>
+                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug" data-i18n="home.crisis.stat1Label">Indians living with diabetes</p>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="home.crisis.stat1Source">ICMR-INDIAB Study</p>
                 </div>
                 <div class="text-center bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-amber-400">#2</p>
-                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug">Highest diabetes burden globally</p>
-                    <p class="text-xs text-slate-500 mt-1">IDF Atlas 2025</p>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-amber-400" data-i18n="home.crisis.stat2Value">#2</p>
+                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug" data-i18n="home.crisis.stat2Label">Highest diabetes burden globally</p>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="home.crisis.stat2Source">IDF Atlas 2025</p>
                 </div>
                 <div class="text-center bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-orange-400">43%</p>
-                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug">Of diabetics are undiagnosed</p>
-                    <p class="text-xs text-slate-500 mt-1">IDF 2024</p>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-orange-400" data-i18n="home.crisis.stat3Value">43%</p>
+                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug" data-i18n="home.crisis.stat3Label">Of diabetics are undiagnosed</p>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="home.crisis.stat3Source">IDF 2024</p>
                 </div>
                 <div class="text-center bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50">
-                    <p class="text-4xl sm:text-5xl font-extrabold text-rose-400">1M</p>
-                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug">Deaths per year from diabetes</p>
-                    <p class="text-xs text-slate-500 mt-1">WHO India</p>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-rose-400" data-i18n="home.crisis.stat4Value">1M</p>
+                    <p class="text-sm text-slate-400 mt-2 font-medium leading-snug" data-i18n="home.crisis.stat4Label">Deaths per year from diabetes</p>
+                    <p class="text-xs text-slate-500 mt-1" data-i18n="home.crisis.stat4Source">WHO India</p>
                 </div>
             </div>
         </div>
@@ -157,18 +169,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <div>
-                    <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Why India, Why Now</p>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">
+                    <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.whyIndia.sectionLabel">Why India, Why Now</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6" data-i18n="home.whyIndia.title">
                         A Perfect Storm of Risk
                     </h2>
                     <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <p>
+                        <p data-i18n-html="home.whyIndia.para1">
                             South Asians are <strong class="text-slate-900">4 times more likely</strong> to develop Type 2 diabetes than Europeans &mdash; and they develop it <strong class="text-slate-900">10 years earlier</strong>, often at a lower body weight. This genetic predisposition, combined with India's rapid shift from agricultural labor to sedentary urban lifestyles, has created an unprecedented health crisis.
                         </p>
-                        <p>
+                        <p data-i18n-html="home.whyIndia.para2">
                             Rice powers over 60% of Indian meals. In South India, daily consumption of 200&ndash;400g of high-glycemic white rice is linked to a <strong class="text-slate-900">4x increase in diabetes risk</strong>. Yet most health guidance isn't tailored to local diets or available in local languages.
                         </p>
-                        <p>
+                        <p data-i18n-html="home.whyIndia.para3">
                             India spends just <strong class="text-slate-900">$109 per diabetic patient per year</strong> &mdash; compared to a global average of $1,760. That's 16x less investment per person, leaving millions without the preventive care they need.
                         </p>
                     </div>
@@ -179,8 +191,8 @@
                             <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Genetic Predisposition</h4>
-                            <p class="text-slate-600 text-sm mt-1">South Asians have 4x higher risk. The "South Asian Phenotype" includes lower insulin production and unfavorable fat distribution.</p>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="home.whyIndia.risk1Title">Genetic Predisposition</h4>
+                            <p class="text-slate-600 text-sm mt-1" data-i18n="home.whyIndia.risk1Text">South Asians have 4x higher risk. The "South Asian Phenotype" includes lower insulin production and unfavorable fat distribution.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start bg-amber-50 rounded-xl p-5 border border-amber-100">
@@ -188,8 +200,8 @@
                             <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Dietary Risk Factors</h4>
-                            <p class="text-slate-600 text-sm mt-1">Rice-heavy diets contribute 62% of daily calories from carbohydrates. Traditional whole grains have been replaced by polished white rice.</p>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="home.whyIndia.risk2Title">Dietary Risk Factors</h4>
+                            <p class="text-slate-600 text-sm mt-1" data-i18n="home.whyIndia.risk2Text">Rice-heavy diets contribute 62% of daily calories from carbohydrates. Traditional whole grains have been replaced by polished white rice.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start bg-orange-50 rounded-xl p-5 border border-orange-100">
@@ -197,8 +209,8 @@
                             <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">The Undiagnosed Crisis</h4>
-                            <p class="text-slate-600 text-sm mt-1">Nearly 39 million Indians are living with diabetes and don't know it. In rural areas, only 24% of people are even aware of the disease.</p>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="home.whyIndia.risk3Title">The Undiagnosed Crisis</h4>
+                            <p class="text-slate-600 text-sm mt-1" data-i18n="home.whyIndia.risk3Text">Nearly 39 million Indians are living with diabetes and don't know it. In rural areas, only 24% of people are even aware of the disease.</p>
                         </div>
                     </div>
                     <div class="flex gap-4 items-start bg-violet-50 rounded-xl p-5 border border-violet-100">
@@ -206,8 +218,8 @@
                             <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 text-sm">Chronic Underspending</h4>
-                            <p class="text-slate-600 text-sm mt-1">India invests $109/patient/year vs. $1,760 globally. 38% of diabetic households face catastrophic health expenses.</p>
+                            <h4 class="font-bold text-slate-900 text-sm" data-i18n="home.whyIndia.risk4Title">Chronic Underspending</h4>
+                            <p class="text-slate-600 text-sm mt-1" data-i18n="home.whyIndia.risk4Text">India invests $109/patient/year vs. $1,760 globally. 38% of diabetic households face catastrophic health expenses.</p>
                         </div>
                     </div>
                 </div>
@@ -219,11 +231,11 @@
     <section class="py-20 lg:py-28 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Bringing It Home</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.coimbatore.sectionLabel">Bringing It Home</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="home.coimbatore.title">
                     Why Coimbatore, Why Us
                 </h2>
-                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed" data-i18n="home.coimbatore.subtitle">
                     Tamil Nadu has the highest diabetes burden of any state in India. Coimbatore, where our families are from, is where we begin.
                 </p>
             </div>
@@ -235,25 +247,25 @@
                             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Tamil Nadu</h3>
-                            <p class="text-red-600 text-sm font-semibold">#1 State in India for Diabetes</p>
+                            <h3 class="text-xl font-bold text-slate-900" data-i18n="home.coimbatore.tnTitle">Tamil Nadu</h3>
+                            <p class="text-red-600 text-sm font-semibold" data-i18n="home.coimbatore.tnBadge">#1 State in India for Diabetes</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-red-500">17.6%</span>
-                            <span class="text-slate-600 text-sm">prevalence &mdash; nearly <strong>2x the national average</strong></span>
+                            <span class="text-slate-600 text-sm" data-i18n-html="home.coimbatore.tnStat1Label">prevalence &mdash; nearly <strong>2x the national average</strong></span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-red-500">6.1M</span>
-                            <span class="text-slate-600 text-sm">adults aged 45+ living with diabetes</span>
+                            <span class="text-slate-600 text-sm" data-i18n="home.coimbatore.tnStat2Label">adults aged 45+ living with diabetes</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-red-500">75%</span>
-                            <span class="text-slate-600 text-sm">of all deaths in Tamil Nadu are from non-communicable diseases</span>
+                            <span class="text-slate-600 text-sm" data-i18n="home.coimbatore.tnStat3Label">of all deaths in Tamil Nadu are from non-communicable diseases</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400 mt-4">Sources: TN STEPS Survey 2020, GBD Study, Frontiers in Endocrinology 2025</p>
+                    <p class="text-xs text-slate-400 mt-4" data-i18n="home.coimbatore.tnSource">Sources: TN STEPS Survey 2020, GBD Study, Frontiers in Endocrinology 2025</p>
                 </div>
                 <!-- Coimbatore -->
                 <div class="bg-white rounded-2xl p-8 lg:p-10 border border-emerald-200 shadow-sm ring-2 ring-emerald-100">
@@ -262,25 +274,25 @@
                             <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-slate-900">Coimbatore District</h3>
-                            <p class="text-emerald-600 text-sm font-semibold">Where Nalam Launches</p>
+                            <h3 class="text-xl font-bold text-slate-900" data-i18n="home.coimbatore.cbeTitle">Coimbatore District</h3>
+                            <p class="text-emerald-600 text-sm font-semibold" data-i18n="home.coimbatore.cbeBadge">Where Nalam Launches</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-emerald-600">840K</span>
-                            <span class="text-slate-600 text-sm">rural residents across the district</span>
+                            <span class="text-slate-600 text-sm" data-i18n="home.coimbatore.cbeStat1Label">rural residents across the district</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-emerald-600">227</span>
-                            <span class="text-slate-600 text-sm">village panchayats needing outreach</span>
+                            <span class="text-slate-600 text-sm" data-i18n="home.coimbatore.cbeStat2Label">village panchayats needing outreach</span>
                         </div>
                         <div class="flex items-baseline gap-3">
                             <span class="text-3xl font-extrabold text-emerald-600">0</span>
-                            <span class="text-slate-600 text-sm">rural primary health centers offering A1C testing</span>
+                            <span class="text-slate-600 text-sm" data-i18n="home.coimbatore.cbeStat3Label">rural primary health centers offering A1C testing</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-400 mt-4">Sources: Census 2011, Coimbatore District Govt, PMC Studies</p>
+                    <p class="text-xs text-slate-400 mt-4" data-i18n="home.coimbatore.cbeSource">Sources: Census 2011, Coimbatore District Govt, PMC Studies</p>
                 </div>
             </div>
         </div>
@@ -294,8 +306,8 @@
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-white mb-2">The Gap We Fill</h3>
-                    <p class="text-emerald-100/90 leading-relaxed">
+                    <h3 class="text-xl font-bold text-white mb-2" data-i18n="home.gap.title">The Gap We Fill</h3>
+                    <p class="text-emerald-100/90 leading-relaxed" data-i18n-html="home.gap.text">
                         A single A1C test costs <strong class="text-white">INR 350+ &mdash; a full day's wages</strong> for a rural laborer. Worse, A1C testing is <strong class="text-white">not available at any primary health center</strong> in rural Tamil Nadu. Nalam brings free, gold-standard A1C testing directly to the villages that need it most.
                     </p>
                 </div>
@@ -307,8 +319,8 @@
     <section class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">The Challenge</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.barriers.sectionLabel">The Challenge</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="home.barriers.title">
                     Three Barriers We're Breaking
                 </h2>
             </div>
@@ -320,8 +332,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Late Detection</h3>
-                    <p class="text-slate-500 leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.barriers.card1Title">Late Detection</h3>
+                    <p class="text-slate-500 leading-relaxed" data-i18n="home.barriers.card1Text">
                         43% of India's 101 million diabetics don't know they have it. In rural areas, awareness drops to just 24%. By the time most people are diagnosed, serious complications have already set in.
                     </p>
                 </div>
@@ -332,8 +344,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cost & Access Barriers</h3>
-                    <p class="text-slate-500 leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.barriers.card2Title">Cost & Access Barriers</h3>
+                    <p class="text-slate-500 leading-relaxed" data-i18n="home.barriers.card2Text">
                         A single A1C test costs a full day's wages for a rural laborer. In rural Tamil Nadu, it's not even available at primary health centers &mdash; only at urban tertiary hospitals.
                     </p>
                 </div>
@@ -344,8 +356,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cultural & Language Gaps</h3>
-                    <p class="text-slate-500 leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.barriers.card3Title">Cultural & Language Gaps</h3>
+                    <p class="text-slate-500 leading-relaxed" data-i18n="home.barriers.card3Text">
                         South Indians consume 200&ndash;400g of rice daily, yet health guidance rarely addresses local diets. Prevention education must be bilingual, practical, and rooted in the foods and habits of the community.
                     </p>
                 </div>
@@ -357,11 +369,11 @@
     <section class="py-20 lg:py-28 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Our Approach</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.model.sectionLabel">Our Approach</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="home.model.title">
                     The Nalam Model
                 </h2>
-                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed" data-i18n="home.model.subtitle">
                     A three-pillar approach to shift the health paradigm from late-stage treatment to early-stage prevention.
                 </p>
             </div>
@@ -373,12 +385,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Free A1C Testing</h3>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.model.pillar1Title">Free A1C Testing</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4" data-i18n="home.model.pillar1Text">
                         Partnering with vetted local laboratories to provide gold-standard blood sugar testing at no cost to the community.
                     </p>
                     <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
-                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span data-i18n="home.model.learnMore">Learn more</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
                 </div>
                 <!-- Pillar 2 -->
@@ -388,12 +400,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Targeted Education</h3>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.model.pillar2Title">Targeted Education</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4" data-i18n="home.model.pillar2Text">
                         Bilingual Tamil/English guidance on nutrition, local foods to eat and avoid, and exercise routines tailored to the community.
                     </p>
                     <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
-                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span data-i18n="home.model.learnMore">Learn more</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
                 </div>
                 <!-- Pillar 3 -->
@@ -403,12 +415,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Data-Driven Follow-up</h3>
-                    <p class="text-slate-500 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="home.model.pillar3Title">Data-Driven Follow-up</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4" data-i18n="home.model.pillar3Text">
                         WhatsApp-based tracking to monitor high-risk individuals and send timely reminders for 3 or 6-month re-testing.
                     </p>
                     <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
-                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span data-i18n="home.model.learnMore">Learn more</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
@@ -418,7 +430,7 @@
     <!-- Featured Image -->
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <img src="nalam. background 1 jpg.jpg" alt="Community health initiative in Coimbatore" class="w-full rounded-2xl shadow-lg object-cover max-h-[480px]">
+            <img src="nalam. background 1 jpg.jpg" alt="Community health initiative in Coimbatore" class="w-full rounded-2xl shadow-lg object-cover max-h-[480px]" data-i18n-alt="home.alt.communityImage">
         </div>
     </section>
 
@@ -426,11 +438,11 @@
     <section class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Our Team</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.team.sectionLabel">Our Team</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="home.team.title">
                     Founded by Students, Driven by Purpose
                 </h2>
-                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed" data-i18n="home.team.subtitle">
                     Five students from the USA with deep family roots in Coimbatore, united by a mission to make preventive healthcare accessible.
                 </p>
             </div>
@@ -468,7 +480,7 @@
             </div>
             <div class="text-center">
                 <a href="team.html" class="inline-flex items-center px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-600 hover:text-white transition-all text-sm">
-                    Meet Our Team
+                    <span data-i18n="home.team.meetTeam">Meet Our Team</span>
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
@@ -479,11 +491,11 @@
     <section class="py-20 lg:py-28 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Research & Reading</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3" data-i18n="home.research.sectionLabel">Research & Reading</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="home.research.title">
                     Understanding the Crisis
                 </h2>
-                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed" data-i18n="home.research.subtitle">
                     Key research and reports that inform our mission and the urgency of diabetes prevention in India.
                 </p>
             </div>
@@ -493,72 +505,72 @@
                     <div class="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-1">The Lancet</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">ICMR National Diabetes Survey Across India</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">India's largest study estimating 101 million people with diabetes and 136 million with prediabetes.</p>
+                    <p class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-1" data-i18n="home.research.art1Source">The Lancet</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art1Title">ICMR National Diabetes Survey Across India</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art1Desc">India's largest study estimating 101 million people with diabetes and 136 million with prediabetes.</p>
                 </a>
                 <!-- Article 2 -->
                 <a href="https://diabetesatlas.org/data-by-location/country/india/" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-blue-500 uppercase tracking-wider mb-1">IDF Atlas</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">IDF Diabetes Atlas: India Profile</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Official data on India's diabetes burden with projections showing a 75% increase by 2050.</p>
+                    <p class="text-xs font-semibold text-blue-500 uppercase tracking-wider mb-1" data-i18n="home.research.art2Source">IDF Atlas</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art2Title">IDF Diabetes Atlas: India Profile</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art2Desc">Official data on India's diabetes burden with projections showing a 75% increase by 2050.</p>
                 </a>
                 <!-- Article 3 -->
                 <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02317-1/fulltext" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-amber-500 uppercase tracking-wider mb-1">The Lancet / WHO</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">India's 212 Million Diabetes Cases</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Landmark WHO-backed global study finding over a quarter of the world's diabetes cases are in India.</p>
+                    <p class="text-xs font-semibold text-amber-500 uppercase tracking-wider mb-1" data-i18n="home.research.art3Source">The Lancet / WHO</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art3Title">India's 212 Million Diabetes Cases</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art3Desc">Landmark WHO-backed global study finding over a quarter of the world's diabetes cases are in India.</p>
                 </a>
                 <!-- Article 4 -->
                 <a href="https://pubmed.ncbi.nlm.nih.gov/30287104/" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-violet-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-violet-500 uppercase tracking-wider mb-1">The Lancet</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">Public Health Systems for Diabetes in South Asia</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Reviews community health worker strategies for type 2 diabetes prevention in South Asia.</p>
+                    <p class="text-xs font-semibold text-violet-500 uppercase tracking-wider mb-1" data-i18n="home.research.art4Source">The Lancet</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art4Title">Public Health Systems for Diabetes in South Asia</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art4Desc">Reviews community health worker strategies for type 2 diabetes prevention in South Asia.</p>
                 </a>
                 <!-- Article 5 -->
                 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3570875/" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-teal-500 uppercase tracking-wider mb-1">PMC / Diabetes Science</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">Telemedicine Diabetes Prevention in Rural Tamil Nadu</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Reports on the Chunampet project that screened 86.5% of adults across 42 Tamil Nadu villages.</p>
+                    <p class="text-xs font-semibold text-teal-500 uppercase tracking-wider mb-1" data-i18n="home.research.art5Source">PMC / Diabetes Science</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art5Title">Telemedicine Diabetes Prevention in Rural Tamil Nadu</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art5Desc">Reports on the Chunampet project that screened 86.5% of adults across 42 Tamil Nadu villages.</p>
                 </a>
                 <!-- Article 6 -->
                 <a href="https://diabetesjournals.org/care/article/31/6/1097/25081/A-Community-Based-Diabetes-Prevention-and" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-emerald-500 uppercase tracking-wider mb-1">Diabetes Care / ADA</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">Community Prevention Program in Rural Tamil Nadu</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Village-level lifestyle intervention that reduced fasting glucose by 11-25% in participants.</p>
+                    <p class="text-xs font-semibold text-emerald-500 uppercase tracking-wider mb-1" data-i18n="home.research.art6Source">Diabetes Care / ADA</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art6Title">Community Prevention Program in Rural Tamil Nadu</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art6Desc">Village-level lifestyle intervention that reduced fasting glucose by 11-25% in participants.</p>
                 </a>
                 <!-- Article 7 -->
                 <a href="https://www.thelancet.com/journals/lansea/article/piis2772-3682(25)00078-2/fulltext" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-1">Lancet Southeast Asia</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">Family Engagement in South Asian Diabetes Care</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Integrating family support and digital platforms into diabetes management across South Asia.</p>
+                    <p class="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-1" data-i18n="home.research.art7Source">Lancet Southeast Asia</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art7Title">Family Engagement in South Asian Diabetes Care</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art7Desc">Integrating family support and digital platforms into diabetes management across South Asia.</p>
                 </a>
                 <!-- Article 8 -->
                 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11340170/" target="_blank" rel="noopener" class="group card-hover bg-white rounded-2xl p-6 border border-slate-200 block">
                     <div class="w-10 h-10 bg-rose-50 rounded-lg flex items-center justify-center mb-4">
                         <svg class="w-5 h-5 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-rose-500 uppercase tracking-wider mb-1">Implementation Science</p>
-                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors">Community Diabetes-Hypertension Control in Tamil Nadu</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed">Peer support and community mobilization trial across two Tamil Nadu districts to combat NCDs.</p>
+                    <p class="text-xs font-semibold text-rose-500 uppercase tracking-wider mb-1" data-i18n="home.research.art8Source">Implementation Science</p>
+                    <h4 class="font-bold text-slate-900 text-sm mb-2 group-hover:text-emerald-700 transition-colors" data-i18n="home.research.art8Title">Community Diabetes-Hypertension Control in Tamil Nadu</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed" data-i18n="home.research.art8Desc">Peer support and community mobilization trial across two Tamil Nadu districts to combat NCDs.</p>
                 </a>
             </div>
         </div>
@@ -570,18 +582,18 @@
             <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
         </div>
         <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4" data-i18n="home.cta.title">
                 Join Us in the Fight Against Diabetes
             </h2>
-            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed" data-i18n="home.cta.subtitle">
                 Whether you donate, volunteer, or simply spread the word, your support helps us bring free preventive healthcare to the communities that need it most.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
-                    Get Involved
+                    <span data-i18n="home.cta.getInvolved">Get Involved</span>
                     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
-                <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-sm">
+                <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-sm" data-i18n="home.cta.contactUs">
                     Contact Us
                 </a>
             </div>
@@ -594,24 +606,24 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain">
-                        <span class="text-lg font-bold">Nalam Diabetes Prevention Foundation</span>
+                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain" data-i18n-alt="common.alt.logoSmall">
+                        <span class="text-lg font-bold" data-i18n="common.footer.orgName">Nalam Diabetes Prevention Foundation</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="common.footer.orgDescription">
                         A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4" data-i18n="common.footer.quickLinks">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors" data-i18n="common.footer.aboutUs">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors" data-i18n="common.footer.ourPrograms">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors" data-i18n="common.footer.ourTeam">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors" data-i18n="common.footer.getInvolved">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4" data-i18n="common.footer.contact">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
                             <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
@@ -621,13 +633,13 @@
                         </li>
                         <li class="text-slate-400 text-sm flex items-center gap-2">
                             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Coimbatore, Tamil Nadu, India
+                            <span data-i18n="common.footer.location">Coimbatore, Tamil Nadu, India</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-12 pt-8 text-center">
-                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
+                <p class="text-slate-500 text-sm" data-i18n="common.footer.copyright">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>

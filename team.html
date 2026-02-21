@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){try{var l=localStorage.getItem('nalam-lang');if(l==='ta'){document.documentElement.lang='ta';document.documentElement.classList.add('i18n-loading')}}catch(e){}})()</script>
     <title>Our Team - Nalam Diabetes Prevention Foundation</title>
     <meta name="description" content="Meet the five student founders of Nalam Diabetes Prevention Foundation, dedicated to diabetes prevention in Coimbatore, Tamil Nadu.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +12,7 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+              sans: ['Inter', 'Noto Sans Tamil', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
           }
         }
@@ -19,9 +20,10 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
+    <script src="i18n.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 antialiased bg-white">
 
@@ -30,19 +32,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
-                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
-                    <span class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Prevention Foundation</span>
+                    <img src="logo.png" alt="Nalam Diabetes Prevention Foundation" data-i18n-alt="common.alt.logo" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
+                    <span data-i18n="common.header.orgName" class="text-base md:text-xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Prevention Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
-                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
-                    <a href="team.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                    <a href="index.html" data-i18n="common.nav.home" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
+                    <a href="about.html" data-i18n="common.nav.about" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="programs.html" data-i18n="common.nav.programs" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
+                    <a href="team.html" data-i18n="common.nav.team" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
+                    <button class="lang-toggle inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 hover:border-emerald-300 transition-colors text-sm" aria-label="Switch to Tamil">
+                        <span class="lang-en font-bold text-emerald-600">EN</span>
+                        <span class="text-slate-300">|</span>
+                        <span class="lang-ta text-slate-400">தமிழ்</span>
+                    </button>
+                    <a href="get-involved.html" data-i18n="common.nav.getInvolved" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
                         Get Involved
                     </a>
                 </nav>
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu" data-i18n-aria="common.mobile.toggleMenu">
                     <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -51,11 +58,16 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+                <button class="lang-toggle w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-slate-50 border border-slate-200 text-sm mb-2" aria-label="Switch to Tamil">
+                    <span class="lang-en font-bold text-emerald-600">EN</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="lang-ta text-slate-400">தமிழ்</span>
+                </button>
+                <a href="index.html" data-i18n="common.nav.home" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="about.html" data-i18n="common.nav.about" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" data-i18n="common.nav.programs" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" data-i18n="common.nav.team" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Team</a>
+                <a href="get-involved.html" data-i18n="common.nav.getInvolved" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
             </div>
         </div>
     </header>
@@ -63,11 +75,11 @@
     <!-- Page Hero -->
     <section class="bg-slate-900 pt-28 pb-16 lg:pt-44 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Our Team</p>
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+            <p data-i18n="team.hero.sectionLabel" class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Our Team</p>
+            <h1 data-i18n="team.hero.title" class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 Meet the Founders
             </h1>
-            <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            <p data-i18n="team.hero.subtitle" class="text-lg text-slate-400 max-w-2xl leading-relaxed">
                 We are a dedicated group of students from the USA with deep family roots in Coimbatore, committed to bridging the healthcare gap through technology, engineering, and community service.
             </p>
         </div>
@@ -83,8 +95,8 @@
                         <span class="text-2xl font-bold text-white">AS</span>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-1">Aditya Satish</h3>
-                    <p class="text-emerald-600 text-sm font-medium mb-4">Middle School Student</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">
+                    <p data-i18n="team.member.adityaRole" class="text-emerald-600 text-sm font-medium mb-4">Middle School Student</p>
+                    <p data-i18n="team.member.adityaBio" class="text-slate-500 text-sm leading-relaxed">
                         Aditya combines his interests in robotics and research with a mission of service. He is focused on leveraging modern technology to uplift communities and provide others with the same opportunities he has enjoyed.
                     </p>
                 </div>
@@ -94,8 +106,8 @@
                         <span class="text-2xl font-bold text-white">AD</span>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-1">Advika Dhanish</h3>
-                    <p class="text-teal-600 text-sm font-medium mb-4">Middle School Student</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">
+                    <p data-i18n="team.member.advikaRole" class="text-teal-600 text-sm font-medium mb-4">Middle School Student</p>
+                    <p data-i18n="team.member.advikaBio" class="text-slate-500 text-sm leading-relaxed">
                         Advika brings dedication and a strong desire to improve community awareness regarding essential health practices and preventative care for the people of Coimbatore.
                     </p>
                 </div>
@@ -105,8 +117,8 @@
                         <span class="text-2xl font-bold text-white">GK</span>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-1">Guhan Kumar</h3>
-                    <p class="text-cyan-600 text-sm font-medium mb-4">High School Student</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">
+                    <p data-i18n="team.member.guhanRole" class="text-cyan-600 text-sm font-medium mb-4">High School Student</p>
+                    <p data-i18n="team.member.guhanBio" class="text-slate-500 text-sm leading-relaxed">
                         Guhan is hands-on and wants to make an impact in the field of mechanical engineering and AI, applying technical solutions to logistical healthcare challenges.
                     </p>
                 </div>
@@ -116,8 +128,8 @@
                         <span class="text-2xl font-bold text-white">PS</span>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-1">Pranav Saravanan</h3>
-                    <p class="text-emerald-600 text-sm font-medium mb-4">High School Student</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">
+                    <p data-i18n="team.member.pranavRole" class="text-emerald-600 text-sm font-medium mb-4">High School Student</p>
+                    <p data-i18n="team.member.pranavBio" class="text-slate-500 text-sm leading-relaxed">
                         Pranav focuses on the operational and strategic goals of the foundation, ensuring that outreach is effectively reaching the villages that need it most.
                     </p>
                 </div>
@@ -127,8 +139,8 @@
                         <span class="text-2xl font-bold text-white">RS</span>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-1">Rithika Srikannan</h3>
-                    <p class="text-teal-600 text-sm font-medium mb-4">Middle School Student</p>
-                    <p class="text-slate-500 text-sm leading-relaxed">
+                    <p data-i18n="team.member.rithikaRole" class="text-teal-600 text-sm font-medium mb-4">Middle School Student</p>
+                    <p data-i18n="team.member.rithikaBio" class="text-slate-500 text-sm leading-relaxed">
                         Rithika is passionate about improving health using technologies like AI and data science, aiming to leverage modern tools for better preventative tracking and outcomes.
                     </p>
                 </div>
@@ -140,38 +152,38 @@
     <section class="py-20 lg:py-28 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">How We Work</p>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <p data-i18n="team.roles.sectionLabel" class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">How We Work</p>
+                <h2 data-i18n="team.roles.title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Foundation Roles
                 </h2>
-                <p class="mt-4 text-lg text-slate-500">
+                <p data-i18n="team.roles.subtitle" class="mt-4 text-lg text-slate-500">
                     Together, our team covers every aspect of running the foundation &mdash; from fundraising to fieldwork.
                 </p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Fundraising & Financial Management</span>
+                    <span data-i18n="team.roles.role1" class="text-sm text-slate-700 font-medium">Fundraising & Financial Management</span>
                 </div>
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Foundation Registration (US &amp; India)</span>
+                    <span data-i18n="team.roles.role2" class="text-sm text-slate-700 font-medium">Foundation Registration (US &amp; India)</span>
                 </div>
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Website & Technology</span>
+                    <span data-i18n="team.roles.role3" class="text-sm text-slate-700 font-medium">Website & Technology</span>
                 </div>
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Logistics & Lab Coordination</span>
+                    <span data-i18n="team.roles.role4" class="text-sm text-slate-700 font-medium">Logistics & Lab Coordination</span>
                 </div>
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Content & Communication</span>
+                    <span data-i18n="team.roles.role5" class="text-sm text-slate-700 font-medium">Content & Communication</span>
                 </div>
                 <div class="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-200">
                     <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                    <span class="text-sm text-slate-700 font-medium">Trend Monitoring & Analytics</span>
+                    <span data-i18n="team.roles.role6" class="text-sm text-slate-700 font-medium">Trend Monitoring & Analytics</span>
                 </div>
             </div>
         </div>
@@ -180,13 +192,13 @@
     <!-- CTA -->
     <section class="py-20 lg:py-28 bg-gradient-to-br from-emerald-700 to-teal-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+            <h2 data-i18n="team.cta.title" class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
                 Want to Join Our Mission?
             </h2>
-            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p data-i18n="team.cta.subtitle" class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
                 We're always looking for volunteers, mentors, and supporters who share our vision for a healthier Coimbatore.
             </p>
-            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+            <a href="get-involved.html" data-i18n="team.cta.button" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
                 Get Involved
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -199,24 +211,24 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div>
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain">
-                        <span class="text-lg font-bold">Nalam Diabetes Prevention Foundation</span>
+                        <img src="logo.png" alt="Nalam" data-i18n-alt="common.alt.logoSmall" class="h-10 w-10 object-contain">
+                        <span data-i18n="common.footer.orgName" class="text-lg font-bold">Nalam Diabetes Prevention Foundation</span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed">
+                    <p data-i18n="common.footer.orgDescription" class="text-slate-400 text-sm leading-relaxed">
                         A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <h4 data-i18n="common.footer.quickLinks" class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="about.html" data-i18n="common.footer.aboutUs" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" data-i18n="common.footer.ourPrograms" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" data-i18n="common.footer.ourTeam" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" data-i18n="common.footer.getInvolved" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <h4 data-i18n="common.footer.contact" class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
                             <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
@@ -226,13 +238,13 @@
                         </li>
                         <li class="text-slate-400 text-sm flex items-center gap-2">
                             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Coimbatore, Tamil Nadu, India
+                            <span data-i18n="common.footer.location">Coimbatore, Tamil Nadu, India</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-slate-800 mt-12 pt-8 text-center">
-                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
+                <p data-i18n="common.footer.copyright" class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Prevention Foundation. All rights reserved.</p>
             </div>
         </div>
     </footer>
