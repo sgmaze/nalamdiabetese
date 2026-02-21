@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Nalam Diabetic Foundation</title>
+    <meta name="description" content="Support Nalam Diabetic Foundation's mission to prevent diabetes in Coimbatore. Donate, volunteer, or help spread the word.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body class="font-sans text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Nalam Diabetic Foundation" class="h-11 w-11 object-contain">
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">Nalam</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                        Get Involved
+                    </a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 pt-32 pb-16 lg:pt-36 lg:pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold text-emerald-300 uppercase tracking-wider mb-3">Get Involved</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Make a Difference
+            </h1>
+            <p class="text-lg text-emerald-100/80 max-w-2xl leading-relaxed">
+                Every contribution &mdash; big or small &mdash; helps us bring free diabetes prevention to the communities of Coimbatore that need it most.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ways to Help -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Support Us</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Ways You Can Help
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Donate -->
+                <div class="card-hover bg-gradient-to-b from-emerald-50 to-white border border-emerald-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Donate</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Your donation directly funds free A1C testing, educational materials, and clinic operations. Every dollar goes toward making preventive healthcare accessible.
+                    </p>
+                    <a href="mailto:nalamdiabetictrust@gmail.com?subject=Donation%20Inquiry" class="inline-flex items-center px-6 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors">
+                        Donate Now
+                    </a>
+                </div>
+                <!-- Volunteer -->
+                <div class="card-hover bg-gradient-to-b from-amber-50 to-white border border-amber-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Volunteer</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Whether you're in the USA or India, your skills can help. We need help with fundraising, content creation, logistics, and community outreach.
+                    </p>
+                    <a href="mailto:nalamdiabetictrust@gmail.com?subject=Volunteer%20Inquiry" class="inline-flex items-center px-6 py-2.5 bg-amber-500 text-white text-sm font-semibold rounded-full hover:bg-amber-600 transition-colors">
+                        Volunteer
+                    </a>
+                </div>
+                <!-- Spread the Word -->
+                <div class="card-hover bg-gradient-to-b from-cyan-50 to-white border border-cyan-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Spread the Word</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Share our mission with friends, family, and on social media. Awareness is the first step toward prevention, and your voice amplifies our reach.
+                    </p>
+                    <a href="mailto:nalamdiabetictrust@gmail.com?subject=Partnership%20Inquiry" class="inline-flex items-center px-6 py-2.5 bg-cyan-600 text-white text-sm font-semibold rounded-full hover:bg-cyan-700 transition-colors">
+                        Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact of Donation -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Your Impact</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Where Your Support Goes
+                </h2>
+                <p class="mt-4 text-lg text-slate-500">
+                    We are committed to maximizing the social impact of every dollar raised through bulk testing rates and efficient operations.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">A1C Tests</h4>
+                    <p class="text-slate-500 text-xs">Free blood sugar screening for community members</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">Education</h4>
+                    <p class="text-slate-500 text-xs">Bilingual pamphlets and health guidance materials</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">Technology</h4>
+                    <p class="text-slate-500 text-xs">WhatsApp follow-up system and data tracking</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">Clinic Operations</h4>
+                    <p class="text-slate-500 text-xs">Venue logistics and community coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Contact</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                    Have questions or want to learn more? We'd love to hear from you. Reach out and we'll get back to you as soon as possible.
+                </p>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-center gap-3 text-slate-700">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-lg font-medium hover:text-emerald-600 transition-colors">
+                                nalamdiabetictrust@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center gap-3 text-slate-500">
+                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <span class="text-lg">Coimbatore, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-slate-200 mt-8 pt-8">
+                        <p class="text-sm text-slate-500 mb-4">Send us a message directly:</p>
+                        <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm text-sm">
+                            <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            Email Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain">
+                        <span class="text-lg font-bold">Nalam Diabetic Foundation</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <ul class="space-y-2.5">
+                        <li>
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                nalamdiabetictrust@gmail.com
+                            </a>
+                        </li>
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Coimbatore, Tamil Nadu, India
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetic Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    </script>
+
+</body>
+</html>

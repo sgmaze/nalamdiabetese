@@ -3,94 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nalam Diabetic Foundation - Home</title>
+    <title>Nalam Diabetic Foundation - Preventing Diabetes in Coimbatore</title>
+    <meta name="description" content="A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through free A1C testing, bilingual health education, and community outreach.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
 </head>
-<body>
+<body class="font-sans text-slate-800 antialiased">
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Nalam Diabetic Foundation Logo">
-            <h1>Nalam Diabetic Foundation</h1>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo.png" alt="Nalam Diabetic Foundation" class="h-11 w-11 object-contain">
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">Nalam</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                        Get Involved
+                    </a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="team.html">Meet the Team</a></li>
-            </ul>
-        </nav>
+        <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Home</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Bridging the Healthcare Gap in Coimbatore</h2>
-            <p>Nalam Diabetic Foundation is a student-led non-profit initiative dedicated to combating the diabetes epidemic in Tamil Nadu, India. Founded by five high school students from the USA with deep family roots in Coimbatore, the trust seeks to bridge the gap in healthcare through early detection, prevention, and community awareness.</p>
-            
-            <div class="mission-statement">
-                <strong>Our Mission</strong>
-                "Our mission is to shift the local health paradigm from late-stage disease management to early-stage prevention, ensuring that the people of Coimbatore and surrounding villages have the tools to live healthier, longer lives."
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-teal-500/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-emerald-700/40 text-emerald-200 text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-emerald-600/30">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full pulse-dot"></span>
+                    Student-Led Initiative &bull; Launching May 2026
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+                    Preventing Diabetes,<br>
+                    <span class="text-emerald-300">One Community at a Time</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-emerald-100/80 max-w-2xl mb-10 leading-relaxed">
+                    Free A1C testing, bilingual health education, and data-driven follow-up for the communities of Coimbatore, Tamil Nadu.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="programs.html" class="inline-flex items-center px-7 py-3.5 bg-white text-emerald-900 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg shadow-emerald-900/20 text-sm">
+                        Our Programs
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="get-involved.html" class="inline-flex items-center px-7 py-3.5 border-2 border-emerald-400/30 text-white font-semibold rounded-full hover:bg-emerald-800/50 transition-all text-sm">
+                        Get Involved
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        
-        <div style="text-align: center; margin: 40px 0;">
-            <img src="nalam background 3.png" alt="A local family in Coimbatore" style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+    <!-- Impact Stats -->
+    <section class="relative -mt-8 z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">25+</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">Free Clinics Per Year</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">5</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">Student Founders</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Free</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">A1C Blood Testing</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">2026</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">Foundation Launch</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <section id="problem">
-            <div class="section-header">
-                <h2>The Problem</h2>
+    <!-- The Problem -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">The Challenge</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Why We Act Now
+                </h2>
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                    India is the world's diabetes capital. In the Coimbatore region, many only discover they are diabetic after serious complications have already set in.
+                </p>
             </div>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Late Detection</h3>
-                    <p>Many residents in the Coimbatore region only discover they are diabetic after complications arise.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Late Detection</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Many residents only discover they are diabetic after complications arise, leading to preventable suffering and higher treatment costs.
+                    </p>
                 </div>
-                <div class="card">
-                    <h3>Lack of Prioritization</h3>
-                    <p>Regular preventative testing (like A1C) is not a common practice due to costs and lack of awareness.</p>
+                <!-- Card 2 -->
+                <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Lack of Awareness</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Regular preventative testing like A1C is not a common practice due to costs and lack of awareness about its importance.
+                    </p>
                 </div>
-                <div class="card">
-                    <h3>Cultural Barriers</h3>
-                    <p>Health information is often not available in accessible Tamil-language formats that resonate with local dietary and lifestyle habits.</p>
+                <!-- Card 3 -->
+                <div class="card-hover bg-white border border-slate-200 rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cultural Barriers</h3>
+                    <p class="text-slate-500 leading-relaxed">
+                        Health information is often unavailable in accessible Tamil-language formats that resonate with local dietary and lifestyle habits.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <div style="text-align: center; margin: 80px 0 60px 0;">
-            <img src="nalam. background 1 jpg.jpg" alt="A medical professional conducting a preventative blood test" style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
         </div>
+    </section>
 
-        <section id="solution">
-            <div class="section-header">
-                <h2>Our Solution</h2>
+    <!-- Our Approach -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Our Approach</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    The Nalam Model
+                </h2>
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                    A three-pillar approach to shift the health paradigm from late-stage treatment to early-stage prevention.
+                </p>
             </div>
-            <div class="grid-3">
-                <div class="card solution-card">
-                    <h3>Free A1C Testing</h3>
-                    <p>Partnering with a vetted local Coimbatore laboratory to provide gold-standard testing for blood sugar levels.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Free A1C Testing</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">
+                        Partnering with vetted local laboratories to provide gold-standard blood sugar testing at no cost to the community.
+                    </p>
+                    <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
+                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
-                <div class="card solution-card">
-                    <h3>Targeted Education</h3>
-                    <p>Providing immediate, bilingual (Tamil/English) guidance on nutrition, local foods to eat/avoid, and exercise routines.</p>
+                <!-- Pillar 2 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Targeted Education</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">
+                        Bilingual Tamil/English guidance on nutrition, local foods to eat and avoid, and exercise routines tailored to the community.
+                    </p>
+                    <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
+                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
-                <div class="card solution-card">
-                    <h3>Data-Driven Follow-up</h3>
-                    <p>Using a WhatsApp-based system to track high-risk individuals and remind them to return for a 3 or 6 month re-test depending on their risk level.</p>
+                <!-- Pillar 3 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Data-Driven Follow-up</h3>
+                    <p class="text-slate-500 leading-relaxed mb-4">
+                        WhatsApp-based tracking to monitor high-risk individuals and send timely reminders for 3 or 6-month re-testing.
+                    </p>
+                    <a href="programs.html" class="text-emerald-600 font-semibold text-sm hover:text-emerald-700 inline-flex items-center gap-1">
+                        Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <footer>
-        <div class="footer-content">
-            <a href="mailto:nalamdiabetictrust@gmail.com" class="contact-link">Contact Us</a>
-            
-            
+    <!-- Featured Image -->
+    <section class="py-16 lg:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <img src="nalam. background 1 jpg.jpg" alt="Community health initiative in Coimbatore" class="w-full rounded-2xl shadow-lg object-cover max-h-[480px]">
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Our Team</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Founded by Students, Driven by Purpose
+                </h2>
+                <p class="mt-4 text-lg text-slate-500 leading-relaxed">
+                    Five students from the USA with deep family roots in Coimbatore, united by a mission to make preventive healthcare accessible.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-emerald-700">AS</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-900">Aditya Satish</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-teal-700">AD</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-900">Advika Dhanish</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-cyan-700">GK</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-900">Guhan Kumar</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-emerald-700">PS</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-900">Pranav Saravanan</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-xl font-bold text-teal-700">RS</span>
+                    </div>
+                    <p class="text-sm font-semibold text-slate-900">Rithika Srikannan</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="team.html" class="inline-flex items-center px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-full hover:bg-emerald-600 hover:text-white transition-all text-sm">
+                    Meet Our Team
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-emerald-700 to-teal-800 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+        </div>
+        <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                Join Us in the Fight Against Diabetes
+            </h2>
+            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+                Whether you donate, volunteer, or simply spread the word, your support helps us bring free preventive healthcare to the communities that need it most.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+                    Get Involved
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+                <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all text-sm">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="Nalam" class="h-10 w-10 object-contain">
+                        <span class="text-lg font-bold">Nalam Diabetic Foundation</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <ul class="space-y-2.5">
+                        <li>
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                nalamdiabetictrust@gmail.com
+                            </a>
+                        </li>
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Coimbatore, Tamil Nadu, India
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetic Foundation. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>
