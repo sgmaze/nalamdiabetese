@@ -1,4 +1,4 @@
-# Nalam Diabetes Prevention Foundation
+# Nalam Diabetes Foundation
 
 **Preventing Diabetes, One Community at a Time**
 
@@ -8,7 +8,7 @@ A student-led non-profit bringing free A1C testing, bilingual health education, 
 
 ## About
 
-Nalam Diabetes Prevention Foundation was born from a simple observation: too many families in Coimbatore were discovering diabetes only after serious complications had already set in. Five students with roots in Tamil Nadu came together to change that through early detection and community-level prevention.
+Nalam Diabetes Foundation was born from a simple observation: too many families in Coimbatore were discovering diabetes only after serious complications had already set in. Five students with roots in Tamil Nadu came together to change that through early detection and community-level prevention.
 
 This repository contains the foundation's public website — a static, bilingual (English/Tamil) site built with modern web technologies and no build tools required.
 
