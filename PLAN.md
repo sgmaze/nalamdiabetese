@@ -42,12 +42,13 @@ These rules apply before anything else, because the repo is public and git keeps
 - **Name.** Done: "the Nalam Foundation" in Rithika's bio and the footer logo's "Nalam" alt text now read "Nalam Diabetes Foundation." "The Nalam Model" stays as the name of the program.
 - **Consent.** Agree on a photo and story consent process, and on who approves.
 
-### Phase 1: Remove Tamil and fix outdated facts
-- **Tamil removal.** Delete the language toggle, `i18n.js`, `translations/translations.json`, the Noto Sans Tamil font, the `i18n-loading` CSS and every `data-i18n*` attribute. The English text already lives in the HTML.
-- **Launch banner.** Remove "Launching May 2026."
-- **Stats.** Replace the aspirational homepage stats ("25+ Free Clinics Per Year," "2026 Foundation Launch") with real numbers from the camps.
-- **Grades.** Aditya and Rithika become High School Student. Confirm Advika's grade.
-- **Wording.** Rewrite future-tense copy ("we will") as past tense ("we did") across all pages.
+### Phase 1: Remove Tamil and fix outdated facts (done)
+- **Tamil removal.** Done: removed the language toggle, `i18n.js`, `translations/`, the Noto Sans Tamil font, the `i18n-loading` CSS and every `data-i18n*` attribute. Tamil Nadu, Coimbatore and the bilingual health education program are still described on the site.
+- **Launch banner.** Done: "Launched May 2026."
+- **Stats.** Done: the homepage shows 114 people tested · 2 free A1C testing camps · 5 student founders · launched May 2026. The "25+ per year" claims on About and Our Work are replaced with real numbers.
+- **Grades.** Done: Aditya and Rithika are High School Students. Advika stays Middle School.
+- **Wording.** Done: About's "Goals for 2026" is now "2026 Milestones" (launch, Camp 1, Camp 2, more camps next, partnerships ongoing). Pre-launch phrases on the homepage and About CTA are updated.
+- **README.** Done: rewritten for the English-only site, with how to contribute.
 
 ### Phase 2: Camps section
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
@@ -93,11 +94,13 @@ These rules apply before anything else, because the repo is public and git keeps
 - **Impact summary.** A printable one-page summary for donors and partners, built from the same totals.
 
 ## Open questions
-1. Is Advika still in middle school?
-2. Who approves photos and consent?
-3. Is the foundation registered (US/India) for accepting donations?
-4. Will there be a new email address under the Nalam Diabetes Foundation name?
+1. Who approves photos and consent?
+2. Is the foundation registered (US/India) for accepting donations?
+3. Will there be a new email address under the Nalam Diabetes Foundation name?
+4. Is "25+ camps a year" still a goal worth stating somewhere?
 
 ## Decisions
-- Camp 1 was in June and Camp 2 in July. Camp 1 data is still pending.
+- Foundation launched May 2026.
+- Camp 1 was in June (40 people tested) and Camp 2 in July (74 people tested). Camp 1 results breakdown is still pending. More camps are planned.
+- Advika is still in middle school; Aditya and Rithika are in high school.
 - The organization's name is Nalam Diabetes Foundation everywhere.
