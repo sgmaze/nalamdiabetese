@@ -1,7 +1,7 @@
 {
   "en": {
     "common.alt.logo": "Nalam Diabetes Foundation",
-    "common.alt.logoSmall": "Nalam",
+    "common.alt.logoSmall": "Nalam Diabetes Foundation",
     "common.header.orgName": "Nalam Diabetes Foundation",
     "common.nav.home": "Home",
     "common.nav.about": "About",
@@ -243,7 +243,7 @@
     "team.member.pranavRole": "High School Student",
     "team.member.pranavBio": "Pranav focuses on the operational and strategic goals of the foundation, ensuring that outreach is effectively reaching the villages that need it most.",
     "team.member.rithikaRole": "Middle School Student",
-    "team.member.rithikaBio": "At the Nalam Foundation, Rithika advances early detection and diabetes prevention by researching ways to improve health outcomes in her grandparents\u2019 community. She also volunteers at <a href=\"https://www.shfb.org\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-teal-600 hover:text-teal-700 underline\">Second Harvest</a>, believing that access to nutritious food is a fundamental right for everyone to lead a healthy life.",
+    "team.member.rithikaBio": "At Nalam Diabetes Foundation, Rithika advances early detection and diabetes prevention by researching ways to improve health outcomes in her grandparents\u2019 community. She also volunteers at <a href=\"https://www.shfb.org\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-teal-600 hover:text-teal-700 underline\">Second Harvest</a>, believing that access to nutritious food is a fundamental right for everyone to lead a healthy life.",
     "team.roles.sectionLabel": "How We Work",
     "team.roles.title": "Foundation Roles",
     "team.roles.subtitle": "Together, our team covers every aspect of running the foundation \u2014 from fundraising to fieldwork.",
