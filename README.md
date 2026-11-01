@@ -2,7 +2,7 @@
 
 **Preventing Diabetes, One Community at a Time**
 
-A student-led non-profit bringing free A1C testing, bilingual health education, and data-driven follow-up to the communities of Coimbatore, Tamil Nadu. Launching May 2026.
+A student-led non-profit bringing free A1C testing, bilingual health education, and data-driven follow-up to the communities of Coimbatore, Tamil Nadu. Launched May 2026.
 
 ---
 
@@ -10,34 +10,27 @@ A student-led non-profit bringing free A1C testing, bilingual health education, 
 
 Nalam Diabetes Foundation was born from a simple observation: too many families in Coimbatore were discovering diabetes only after serious complications had already set in. Five students with roots in Tamil Nadu came together to change that through early detection and community-level prevention.
 
-This repository contains the foundation's public website — a static, bilingual (English/Tamil) site built with modern web technologies and no build tools required.
+Since launching in May 2026, we have run two free A1C testing camps: 40 people tested in June and 74 in July. More camps are planned.
+
+This repository contains the foundation's public website: a static, English-only site with no build tools required.
 
 ## Pages
 
 | Page | File | Description |
 |------|------|-------------|
 | **Home** | `index.html` | Hero, impact stats, diabetes crisis data, the Nalam Model, research articles, call-to-action |
-| **About** | `about.html` | Origin story, mission & vision, strategic pillars, organizational goals |
+| **About** | `about.html` | Origin story, mission & vision, strategic pillars, 2026 milestones |
 | **Our Work** | `programs.html` | The Nalam Model, 5-step process, four core programs |
 | **Team** | `team.html` | Five student founders, foundation roles |
 | **Get Involved** | `get-involved.html` | Donate, volunteer, spread the word, contact info |
 
-## Features
-
-- **Bilingual Support** — Full English/Tamil toggle with 300+ translated strings
-- **Language Persistence** — Selection saved to localStorage, persists across pages
-- **FOUC Prevention** — Inline script prevents flash of wrong language on page load
-- **Responsive Design** — Mobile-first layout with tablet and desktop breakpoints
-- **Modern Typography** — Inter (English) + Noto Sans Tamil (Tamil) via Google Fonts
-- **Tailwind CSS** — Utility-first styling via CDN (no build step)
-
 ## Tech Stack
 
-- **HTML5** — Semantic, accessible markup
-- **Tailwind CSS** — Via CDN (`cdn.tailwindcss.com`), no build tools needed
-- **Vanilla JavaScript** — Custom i18n engine, no frameworks
-- **Google Fonts** — Inter, Noto Sans Tamil
-- **No dependencies** — No package.json, no node_modules, no bundler
+- **HTML5**: one file per page, no templates
+- **Tailwind CSS**: loaded from a CDN (`cdn.tailwindcss.com`), so styling is done with classes in the HTML
+- **style.css**: a few custom styles (animations, nav underline)
+- **Google Fonts**: Inter
+- **No dependencies**: no package.json, no node_modules, no bundler
 
 ## Project Structure
 
@@ -48,56 +41,32 @@ This repository contains the foundation's public website — a static, bilingual
 ├── programs.html               # Our Work page
 ├── team.html                   # Team page
 ├── get-involved.html           # Get Involved page
-├── style.css                   # Custom styles (FOUC prevention, etc.)
-├── i18n.js                     # Translation engine
+├── style.css                   # Custom styles
 ├── logo.png                    # Foundation logo
-└── translations/
-    └── translations.json       # English & Tamil translation strings
+├── images/                     # Photos used on the pages
+├── CNAME                       # Custom domain for GitHub Pages (do not delete)
+└── PLAN.md                     # Website redesign plan
 ```
 
 ## Getting Started
 
-No build tools required. Just serve the files with any static server:
+No build tools required. Open any `.html` file in your browser, or serve the folder locally:
 
 ```bash
-# Clone the repo
-git clone https://github.com/sgmaze/nalamdiabetictrust.git
-cd nalamdiabetictrust
-
-# Serve locally (pick any method)
+git clone https://github.com/sgmaze/nalamdiabetese.git
+cd nalamdiabetese
 python3 -m http.server 3000
-# or
-npx serve .
-# or
-php -S localhost:3000
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Multilingual System
+## Making Changes
 
-The site uses a custom lightweight i18n system:
+1. Create a branch from `main`.
+2. Edit the HTML and check it in your browser.
+3. Open a pull request. Changes need one approval before they go live at www.nalamdiabetes.org.
 
-1. **HTML elements** are tagged with `data-i18n` attributes that map to translation keys
-2. **`translations/translations.json`** contains all strings in both English (`en`) and Tamil (`ta`)
-3. **`i18n.js`** loads the translations and swaps text when the language toggle is clicked
-4. **Language preference** is stored in `localStorage` (key: `nalam-lang`) and persists across pages
-
-### Translation Attributes
-
-| Attribute | Purpose | Example |
-|-----------|---------|---------|
-| `data-i18n` | Text content | `data-i18n="common.nav.home"` |
-| `data-i18n-html` | Inner HTML (preserves child elements) | `data-i18n-html="home.hero.title"` |
-| `data-i18n-alt` | Image alt text | `data-i18n-alt="common.alt.logo"` |
-| `data-i18n-aria` | Aria labels | `data-i18n-aria="common.mobile.toggleMenu"` |
-
-### Adding or Editing Translations
-
-1. Open `translations/translations.json`
-2. Find the key under both `en` and `ta` sections
-3. Update the text values
-4. Keys follow the pattern: `section.subsection.element` (e.g., `home.hero.title`, `common.nav.about`)
+The header and footer are copied into every page, so a change to either one has to be made in all five files.
 
 ## Contact
 
