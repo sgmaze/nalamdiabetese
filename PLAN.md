@@ -50,7 +50,9 @@ These rules apply before anything else, because the repo is public and git keeps
 - **Wording.** Done: About's "Goals for 2026" is now "2026 Milestones" (launch, Camp 1, Camp 2, more camps next, partnerships ongoing). Pre-launch phrases on the homepage and About CTA are updated.
 - **README.** Done: rewritten for the English-only site, with how to contribute.
 
-### Phase 2: Camps section
+### Phase 2: Camps section (in progress)
+- **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer. Both camp pages show "Results coming soon" until the totals are ready.
+- **Still needed (totals only):** the village or place for each camp, the count in each A1C range, how many were newly identified vs. already knew, referrals and follow-up, partners, who ran it, and lessons learned.
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
 - **One page per camp.** All camp pages are copied from one template, `camp-template.html`. Each page has these sections:
   - summary numbers
@@ -104,3 +106,4 @@ These rules apply before anything else, because the repo is public and git keeps
 - Camp 1 was in June (40 people tested) and Camp 2 in July (74 people tested). Camp 1 results breakdown is still pending. More camps are planned.
 - Advika is still in middle school; Aditya and Rithika are in high school.
 - The organization's name is Nalam Diabetes Foundation everywhere.
+- Camps are named by number (Camp 1, Camp 2, …) with files `camp-N.html`. The month, year and place are always shown next to the name, e.g. "Camp 2 · July 2026 · Coimbatore."

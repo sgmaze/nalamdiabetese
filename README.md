@@ -10,7 +10,7 @@ A student-led non-profit bringing free A1C testing, bilingual health education, 
 
 Nalam Diabetes Foundation was born from a simple observation: too many families in Coimbatore were discovering diabetes only after serious complications had already set in. Five students with roots in Tamil Nadu came together to change that through early detection and community-level prevention.
 
-Since launching in May 2026, we have run two free A1C testing camps: 40 people tested in June and 74 in July. More camps are planned.
+Since launching in May 2026, we have run two free A1C screening camps: 40 people tested in June and 74 in July. More camps are planned.
 
 This repository contains the foundation's public website: a static, English-only site with no build tools required.
 
@@ -19,6 +19,8 @@ This repository contains the foundation's public website: a static, English-only
 | Page | File | Description |
 |------|------|-------------|
 | **Home** | `index.html` | Hero, impact stats, diabetes crisis data, the Nalam Model, research articles, call-to-action |
+| **Camps** | `camps.html` | One card per screening camp, linking to its page |
+| **Camp pages** | `camp-1.html`, `camp-2.html` | Results and story for each camp, copied from `camp-template.html` |
 | **About** | `about.html` | Origin story, mission & vision, strategic pillars, 2026 milestones |
 | **Our Work** | `programs.html` | The Nalam Model, 5-step process, four core programs |
 | **Team** | `team.html` | Five student founders, foundation roles |
@@ -37,6 +39,9 @@ This repository contains the foundation's public website: a static, English-only
 ```
 .
 ├── index.html                  # Homepage
+├── camps.html                  # Camps overview
+├── camp-1.html, camp-2.html    # One page per camp
+├── camp-template.html          # Copy this to add a camp (not linked from the site)
 ├── about.html                  # About page
 ├── programs.html               # Our Work page
 ├── team.html                   # Team page
@@ -66,7 +71,13 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 2. Edit the HTML and check it in your browser.
 3. Open a pull request. Changes need one approval before they go live at www.nalamdiabetes.org.
 
-The header and footer are copied into every page, so a change to either one has to be made in all five files.
+The header and footer are copied into every page, so a change to either one has to be made in every page.
+
+### Adding a camp
+
+1. Copy `camp-template.html` to `camp-N.html` and follow the instructions at the top of the file.
+2. Add a card for the camp on `camps.html`.
+3. Only totals go on the site, never anyone's individual result. Show any group under 10 people as "fewer than 10." See the ground rules in `PLAN.md`.
 
 ## Contact
 
