@@ -49,8 +49,7 @@ This repository contains the foundation's public website: a static, English-only
 ├── style.css                   # Custom styles
 ├── logo.png                    # Foundation logo
 ├── images/                     # Photos used on the pages
-├── CNAME                       # Custom domain for GitHub Pages (do not delete)
-└── PLAN.md                     # Website redesign plan
+└── CNAME                       # Custom domain for GitHub Pages (do not delete)
 ```
 
 ## Getting Started
@@ -77,7 +76,22 @@ The header and footer are copied into every page, so a change to either one has 
 
 1. Copy `camp-template.html` to `camp-N.html` and follow the instructions at the top of the file.
 2. Add a card for the camp on `camps.html`.
-3. Only totals go on the site, never anyone's individual result. Show any group under 10 people as "fewer than 10." See the ground rules in `PLAN.md`.
+3. Only totals go on the site, never anyone's individual result. Show any group under 10 people as "fewer than 10." See the ground rules below.
+
+## Ground Rules for Camp Data, Stories, and Photos
+
+This repo is public, and git keeps every past version of every file. Anything committed here can be seen by anyone, forever. These rules come before everything else:
+
+- **No patient-level data in this repo, ever.** That means no lists of people tested, no individual results, and no spreadsheet with one row per person (`.gitignore` blocks `.xlsx`, `.xls` and `.csv` files). Patient-level data also never gets pasted into AI tools.
+- **Totals only.** A team member works out the totals from the patient file outside the repo. Only those totals go on the site, for example "140 tested, 22% in the prediabetes range."
+- **Hide small groups.** Show any group under about 10 people as "fewer than 10." In a single village, small counts can point to specific people.
+- **Use A1C ranges, not diagnoses.** Screening isn't a diagnosis. Report results as:
+  - below 5.7%: normal range
+  - 5.7–6.4%: prediabetes range
+  - 6.5% or higher: diabetes range
+- **No identifying combinations.** Never combine village, age and result in a way that narrows to a person. Don't publish single readings, such as the highest or lowest A1C at a camp.
+- **Photos.** Founders are minors, so their photos need parent consent. Camp photos must not show readable results, forms or registration sheets. No identifiable participants without written consent.
+- **Stories.** Get written consent and use a first name or a pseudonym.
 
 ## Contact
 
