@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--
+  CAMP PAGE TEMPLATE
+
+  To add a camp:
+    1. Copy this file and name it camp-N.html (for example camp-3.html).
+    2. Remove the robots "noindex" line in the <head>.
+    3. Replace every [BRACKETED] value. Search for "[" to find them all.
+    4. Add a card for the camp on camps.html.
+
+  Results:
+    - While results are pending, keep the "Results coming soon" box and leave
+      the results blocks below it hidden (class="hidden").
+    - When the totals are ready, delete the "Results coming soon" box, remove
+      "hidden" from each results block, and fill in the numbers.
+
+  Ground rules (see PLAN.md):
+    - Totals only. Never add lists of people or one row per person.
+    - Any group under 10 people is written as "Fewer than 10", not a number.
+    - Report A1C ranges (normal, prediabetes, diabetes range), not diagnoses.
+    - Never combine village, age and result in a way that points to a person.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Camp [N] - Nalam Diabetes Foundation</title>
+    <meta name="description" content="Results from Nalam Diabetes Foundation's free A1C screening camp in [PLACE], [MONTH YEAR].">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body class="font-sans text-slate-800 antialiased bg-white">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white backdrop-blur-sm z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-2">
+                <a href="index.html" class="flex items-center gap-4">
+                    <img src="logo.png" alt="Nalam Diabetes Foundation" class="h-[67px] w-[67px] md:h-[118px] md:w-[118px] object-contain">
+                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Foundation</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Home</a>
+                    <a href="camps.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Camps</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors shadow-sm">
+                        Get Involved
+                    </a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle menu">
+                    <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
+            <div class="px-4 py-4 space-y-1">
+                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="camps.html" class="block text-sm font-medium text-emerald-600 py-2.5 px-3 rounded-lg bg-emerald-50">Camps</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-600 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-full hover:bg-emerald-700 transition-colors mt-2">Get Involved</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="bg-slate-900 pt-28 pb-16 lg:pt-44 lg:pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="camps.html" class="inline-flex items-center text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors mb-6">
+                <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                All camps
+            </a>
+            <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">[MONTH YEAR] &middot; [PLACE]</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                Camp [N]
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                [One sentence about this camp, for example: Our first free A1C screening camp, held with a local laboratory partner.]
+            </p>
+        </div>
+    </section>
+
+    <!-- Summary Numbers -->
+    <section class="relative -mt-8 z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">[NUMBER]</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">People Tested</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">[MONTH]</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">[YEAR]</p>
+                    </div>
+                    <div>
+                        <!-- While results are pending, use "Soon" here -->
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">[PERCENT]%</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">In Prediabetes or Diabetes Range</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Free</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">A1C Test for Everyone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Results</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    What We Found
+                </h2>
+                <p class="mt-4 text-lg text-slate-500">
+                    A1C shows average blood sugar over the past 2&ndash;3 months. A screening result is not a diagnosis, so we report ranges. A doctor needs to confirm any high result.
+                </p>
+            </div>
+
+            <!-- Results coming soon: delete this box when the totals are ready -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center mb-12">
+                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Results coming soon</h3>
+                <p class="text-slate-500 max-w-xl mx-auto">
+                    We're still adding up the results from this camp. Check back soon for the breakdown.
+                </p>
+            </div>
+
+            <!-- Results by A1C range: remove "hidden" when the totals are ready.
+                 Set each bar's width to the same percent as its label. -->
+            <div class="hidden mb-16">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">Results by A1C Range</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-baseline mb-2">
+                            <p class="font-semibold text-slate-900">Normal range <span class="font-normal text-slate-500 text-sm">(below 5.7%)</span></p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-emerald-500 rounded-full" style="width: [PERCENT]%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-2">
+                            <p class="font-semibold text-slate-900">Prediabetes range <span class="font-normal text-slate-500 text-sm">(5.7&ndash;6.4%)</span></p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-amber-400 rounded-full" style="width: [PERCENT]%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline mb-2">
+                            <p class="font-semibold text-slate-900">Diabetes range <span class="font-normal text-slate-500 text-sm">(6.5% or higher)</span></p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-rose-500 rounded-full" style="width: [PERCENT]%"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-400 mt-6">Groups smaller than 10 people are shown as "fewer than 10" to protect privacy.</p>
+            </div>
+
+            <!-- Newly identified vs. already knew: remove "hidden" when the totals are ready.
+                 Counts only people in the prediabetes or diabetes range. -->
+            <div class="hidden">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Newly Identified vs. Already Knew</h3>
+                <p class="text-slate-500 mb-6">Of the people whose A1C was in the prediabetes or diabetes range:</p>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                        <p class="text-3xl font-extrabold text-amber-600">[NUMBER]</p>
+                        <p class="font-semibold text-slate-900 mt-1">Learned for the first time</p>
+                        <p class="text-sm text-slate-500 mt-1">They didn't know their blood sugar was high before the camp.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                        <p class="text-3xl font-extrabold text-slate-600">[NUMBER]</p>
+                        <p class="font-semibold text-slate-900 mt-1">Already knew</p>
+                        <p class="text-sm text-slate-500 mt-1">They had been told before and got an updated reading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happened Next -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Follow-up</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
+                What Happened Next
+            </h2>
+            <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                <p class="text-slate-600 leading-relaxed">
+                    [Describe referrals and follow-up using totals only, for example: Everyone in the diabetes range was referred to a partner doctor. People in the prediabetes range joined our WhatsApp follow-up for a re-test in 3 months.]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners and Team -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Partners</p>
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-6">Who Helped</h2>
+                    <ul class="space-y-3 text-slate-600">
+                        <li><span class="font-semibold text-slate-900">Doctors:</span> [Clinic or doctor name]</li>
+                        <li><span class="font-semibold text-slate-900">Laboratory:</span> [Lab name]</li>
+                        <li><span class="font-semibold text-slate-900">Community:</span> [Panchayat or local group]</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+                    <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Team</p>
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-6">Who Ran It</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        [Which founders and volunteers ran the camp, and what each did.]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Learned -->
+    <section class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Reflection</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
+                Lessons Learned
+            </h2>
+            <ul class="space-y-4">
+                <li class="flex gap-4 items-start bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <p class="text-slate-600">[Lesson 1: something that worked or that we'll change next time.]</p>
+                </li>
+                <li class="flex gap-4 items-start bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <p class="text-slate-600">[Lesson 2]</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Photos: approved photos only. No readable results, forms or registration
+         sheets, and no identifiable participants without written consent. -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-3">Photos</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
+                At the Camp
+            </h2>
+            <div class="bg-slate-50 border border-dashed border-slate-300 rounded-2xl p-10 text-center">
+                <p class="text-slate-500">Photos from this camp are coming soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You -->
+    <section class="py-20 lg:py-28 bg-gradient-to-br from-emerald-700 to-teal-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                Thank You
+            </h2>
+            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+                [Thank the partners, volunteers, donors and the community who made this camp possible.]
+            </p>
+            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+                Help Fund the Next Camp
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="logo.png" alt="Nalam Diabetes Foundation" class="h-10 w-10 object-contain">
+                        <span class="text-lg font-bold">Nalam Diabetes Foundation</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        A student-led non-profit dedicated to combating the diabetes epidemic in Tamil Nadu through early detection, prevention, and community awareness.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="camps.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Camps</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
+                    <ul class="space-y-2.5">
+                        <li>
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                nalamdiabetictrust@gmail.com
+                            </a>
+                        </li>
+                        <li class="text-slate-400 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span>Coimbatore, Tamil Nadu, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+                <p class="text-slate-500 text-sm">&copy; 2026 Nalam Diabetes Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    </script>
+
+</body>
+</html>

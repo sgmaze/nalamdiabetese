@@ -50,7 +50,12 @@ These rules apply before anything else, because the repo is public and git keeps
 - **Wording.** Done: About's "Goals for 2026" is now "2026 Milestones" (launch, Camp 1, Camp 2, more camps next, partnerships ongoing). Pre-launch phrases on the homepage and About CTA are updated.
 - **README.** Done: rewritten for the English-only site, with how to contribute.
 
-### Phase 2: Camps section
+### Phase 2: Camps section (in progress)
+- **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer.
+- **Partner:** Dr. Vijay Lab provided laboratory and clinic services for Camps 1 and 2, both held in Coimbatore, Tamil Nadu.
+- **Camp 2 results published by standard A1C range:** 74 tested; normal range fewer than 10, prediabetes range 19 (26%), diabetes range 50 (68%); 69 (93%) in the prediabetes or diabetes range, and 35 (47%) above 8.0%. Not published: age and gender breakdowns, the lowest and highest readings, and the sub-groups inside the diabetes range. These are either groups under 10 people, single people's readings, or treatment-goal labels that don't fit a screening.
+- **Camp 2 still needed:** how many already knew they had diabetes (told by a doctor, or on diabetes medicine). It isn't clear yet, so the "newly identified" section stays hidden. Also referrals and follow-up, any other partners (doctors, panchayat), who ran it, and lessons learned.
+- **Camp 1 still needed:** everything above. Its page shows "Results coming soon."
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
 - **One page per camp.** All camp pages are copied from one template, `camp-template.html`. Each page has these sections:
   - summary numbers
@@ -104,3 +109,4 @@ These rules apply before anything else, because the repo is public and git keeps
 - Camp 1 was in June (40 people tested) and Camp 2 in July (74 people tested). Camp 1 results breakdown is still pending. More camps are planned.
 - Advika is still in middle school; Aditya and Rithika are in high school.
 - The organization's name is Nalam Diabetes Foundation everywhere.
+- Camps are named by number (Camp 1, Camp 2, …) with files `camp-N.html`. The month, year and place are always shown next to the name, e.g. "Camp 2 · July 2026 · Coimbatore."

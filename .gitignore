@@ -1,2 +1,7 @@
 .DS_Store
 .claude/
+
+# Camp spreadsheets hold participant-level data: never commit them
+*.xlsx
+*.xls
+*.csv
