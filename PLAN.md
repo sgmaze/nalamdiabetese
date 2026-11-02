@@ -54,7 +54,7 @@ These rules apply before anything else, because the repo is public and git keeps
 - **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer. Both camp pages show "Results coming soon" until the totals are ready.
 - **Partner:** Dr. Vijay Lab provided laboratory and clinic services for Camps 1 and 2, both held in Coimbatore, Tamil Nadu.
 - **Camp 2 headline numbers published:** 74 tested; 62 (84%) at A1C 6.0% or higher, 44 (59%) above 7.0%, 35 (47%) above 8.0%. These come from the lab's cutoffs, which don't line up with the standard ranges. The age and gender tables aren't published because several groups are under 10 people.
-- **Camp 2 recount requested:** counts below 5.7%, 5.7–6.4% and 6.5% or higher. Everyone at Camp 2 was having an A1C test for the first time, and no one had been told before that they had diabetes or prediabetes. So all 62 people at 6.0% or higher are newly identified; after the recount, count everyone at 5.7% or higher.
+- **Camp 2 recount requested:** counts below 5.7%, 5.7–6.4% and 6.5% or higher. Not yet clear whether people had been tested before or already knew they had diabetes, so the "newly identified" section stays hidden until the team has a count of how many already knew (told by a doctor, or on diabetes medicine).
 - **Still needed (totals only):** the count in each A1C range, how many were newly identified vs. already knew, referrals and follow-up, any other partners (doctors, panchayat), who ran it, and lessons learned.
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
 - **One page per camp.** All camp pages are copied from one template, `camp-template.html`. Each page has these sections:
