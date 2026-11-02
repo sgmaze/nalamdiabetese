@@ -52,7 +52,8 @@ These rules apply before anything else, because the repo is public and git keeps
 
 ### Phase 2: Camps section (in progress)
 - **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer. Both camp pages show "Results coming soon" until the totals are ready.
-- **Still needed (totals only):** the village or place for each camp, the count in each A1C range, how many were newly identified vs. already knew, referrals and follow-up, partners, who ran it, and lessons learned.
+- **Partner:** Dr. Vijay Lab provided laboratory and clinic services for Camps 1 and 2, both held in Coimbatore, Tamil Nadu.
+- **Still needed (totals only):** the count in each A1C range, how many were newly identified vs. already knew, referrals and follow-up, any other partners (doctors, panchayat), who ran it, and lessons learned.
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
 - **One page per camp.** All camp pages are copied from one template, `camp-template.html`. Each page has these sections:
   - summary numbers
