@@ -157,14 +157,6 @@
                 </p>
             </div>
 
-            <!-- Breakdown coming soon: delete this note with the headline block above -->
-            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 mb-12">
-                <p class="text-slate-600">
-                    <span class="font-semibold text-slate-900">Full breakdown coming soon.</span>
-                    We're counting results by the standard A1C ranges, and how many people learned for the first time that their blood sugar was high.
-                </p>
-            </div>
-
             <!-- Results by A1C range: remove "hidden" when the totals are ready.
                  Set each bar's width to the same percent as its label. -->
             <div class="hidden mb-16">
@@ -201,23 +193,30 @@
                 <p class="text-xs text-slate-400 mt-6">Groups smaller than 10 people are shown as "fewer than 10" to protect privacy.</p>
             </div>
 
-            <!-- Newly identified vs. already knew: remove "hidden" when the totals are ready.
-                 Counts only people in the prediabetes or diabetes range. -->
-            <div class="hidden">
+            <!-- Newly identified vs. already knew. Uses the 6.0% cutoff until the recount by
+                 standard A1C ranges is in; then count everyone at 5.7% or higher. -->
+            <div class="mb-12">
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Newly Identified vs. Already Knew</h3>
-                <p class="text-slate-500 mb-6">Of the people whose A1C was in the prediabetes or diabetes range:</p>
+                <p class="text-slate-500 mb-6">Of the 62 people with an A1C of 6.0% or higher:</p>
                 <div class="grid sm:grid-cols-2 gap-6">
                     <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
-                        <p class="text-3xl font-extrabold text-amber-600">[NUMBER]</p>
+                        <p class="text-3xl font-extrabold text-amber-600">62</p>
                         <p class="font-semibold text-slate-900 mt-1">Learned for the first time</p>
                         <p class="text-sm text-slate-500 mt-1">They didn't know their blood sugar was high before the camp.</p>
                     </div>
                     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
-                        <p class="text-3xl font-extrabold text-slate-600">[NUMBER]</p>
+                        <p class="text-3xl font-extrabold text-slate-600">0</p>
                         <p class="font-semibold text-slate-900 mt-1">Already knew</p>
-                        <p class="text-sm text-slate-500 mt-1">They had been told before and got an updated reading.</p>
+                        <p class="text-sm text-slate-500 mt-1">No one had been told before that their blood sugar was high.</p>
                     </div>
                 </div>
+            </div>
+            <!-- Breakdown coming soon: delete this note with the headline block above -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6">
+                <p class="text-slate-600">
+                    <span class="font-semibold text-slate-900">Full breakdown coming soon.</span>
+                    We're counting results by the standard A1C ranges: normal (below 5.7%), prediabetes range (5.7&ndash;6.4%) and diabetes range (6.5% or higher).
+                </p>
             </div>
         </div>
     </section>
