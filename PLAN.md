@@ -51,11 +51,11 @@ These rules apply before anything else, because the repo is public and git keeps
 - **README.** Done: rewritten for the English-only site, with how to contribute.
 
 ### Phase 2: Camps section (in progress)
-- **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer. Both camp pages show "Results coming soon" until the totals are ready.
+- **Built:** `camps.html`, `camp-template.html`, `camp-1.html` and `camp-2.html`, plus a Camps link in every page's menu and footer.
 - **Partner:** Dr. Vijay Lab provided laboratory and clinic services for Camps 1 and 2, both held in Coimbatore, Tamil Nadu.
-- **Camp 2 headline numbers published:** 74 tested; 62 (84%) at A1C 6.0% or higher, 44 (59%) above 7.0%, 35 (47%) above 8.0%. These come from the lab's cutoffs, which don't line up with the standard ranges. The age and gender tables aren't published because several groups are under 10 people.
-- **Camp 2 recount requested:** counts below 5.7%, 5.7–6.4% and 6.5% or higher. Not yet clear whether people had been tested before or already knew they had diabetes, so the "newly identified" section stays hidden until the team has a count of how many already knew (told by a doctor, or on diabetes medicine).
-- **Still needed (totals only):** the count in each A1C range, how many were newly identified vs. already knew, referrals and follow-up, any other partners (doctors, panchayat), who ran it, and lessons learned.
+- **Camp 2 results published by standard A1C range:** 74 tested; normal range fewer than 10, prediabetes range 19 (26%), diabetes range 50 (68%); 69 (93%) in the prediabetes or diabetes range, and 35 (47%) above 8.0%. Not published: age and gender breakdowns, the lowest and highest readings, and the sub-groups inside the diabetes range. These are either groups under 10 people, single people's readings, or treatment-goal labels that don't fit a screening.
+- **Camp 2 still needed:** how many already knew they had diabetes (told by a doctor, or on diabetes medicine). It isn't clear yet, so the "newly identified" section stays hidden. Also referrals and follow-up, any other partners (doctors, panchayat), who ran it, and lessons learned.
+- **Camp 1 still needed:** everything above. Its page shows "Results coming soon."
 - **`camps.html`.** One card per camp: date, place, number tested, link to the camp page.
 - **One page per camp.** All camp pages are copied from one template, `camp-template.html`. Each page has these sections:
   - summary numbers

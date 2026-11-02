@@ -93,8 +93,8 @@
                         <p class="text-sm text-slate-500 mt-1 font-medium">2026</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">84%</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">A1C 6.0% or Higher</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">93%</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">In Prediabetes or Diabetes Range</p>
                     </div>
                     <div>
                         <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Free</p>
@@ -118,87 +118,42 @@
                 </p>
             </div>
 
-            <!-- Headline numbers: these use the lab's cutoffs (6.0, 7.0, 8.0), and each bar
-                 counts everyone at or above that level. When the recount by A1C range is in,
-                 delete this block and the note below, and fill in the range blocks instead. -->
-            <div class="mb-12">
-                <h3 class="text-xl font-bold text-slate-900 mb-6">Headline Numbers</h3>
-                <div class="space-y-6">
-                    <div>
-                        <div class="flex justify-between items-baseline gap-4 mb-2">
-                            <p class="font-semibold text-slate-900">A1C 6.0% or higher <span class="font-normal text-slate-500 text-sm">(prediabetes range or above)</span></p>
-                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">84%</span> &middot; 62 people</p>
-                        </div>
-                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-amber-400 rounded-full" style="width: 84%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-baseline gap-4 mb-2">
-                            <p class="font-semibold text-slate-900">Above 7.0% <span class="font-normal text-slate-500 text-sm">(diabetes range)</span></p>
-                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">59%</span> &middot; 44 people</p>
-                        </div>
-                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-rose-400 rounded-full" style="width: 59%"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-baseline gap-4 mb-2">
-                            <p class="font-semibold text-slate-900">Above 8.0% <span class="font-normal text-slate-500 text-sm">(well into the diabetes range)</span></p>
-                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">47%</span> &middot; 35 people</p>
-                        </div>
-                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-rose-600 rounded-full" style="width: 47%"></div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-slate-500 mt-8 leading-relaxed">
-                    Most of the 74 people tested were men in their 50s and 60s.
-                </p>
-            </div>
-
-            <!-- Breakdown coming soon: delete this note with the headline block above -->
-            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 mb-12">
-                <p class="text-slate-600">
-                    <span class="font-semibold text-slate-900">Full breakdown coming soon.</span>
-                    We're counting results by the standard A1C ranges, and how many people learned for the first time that their blood sugar was high.
-                </p>
-            </div>
-
-            <!-- Results by A1C range: remove "hidden" when the totals are ready.
-                 Set each bar's width to the same percent as its label. -->
-            <div class="hidden mb-16">
+            <!-- Results by A1C range. Set each bar's width to the same percent as its label. -->
+            <div class="mb-16">
                 <h3 class="text-xl font-bold text-slate-900 mb-6">Results by A1C Range</h3>
                 <div class="space-y-6">
                     <div>
                         <div class="flex justify-between items-baseline mb-2">
                             <p class="font-semibold text-slate-900">Normal range <span class="font-normal text-slate-500 text-sm">(below 5.7%)</span></p>
-                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">Fewer than 10</span> people</p>
                         </div>
                         <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-emerald-500 rounded-full" style="width: [PERCENT]%"></div>
+                            <div class="h-full bg-emerald-500 rounded-full" style="width: 7%"></div>
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between items-baseline mb-2">
                             <p class="font-semibold text-slate-900">Prediabetes range <span class="font-normal text-slate-500 text-sm">(5.7&ndash;6.4%)</span></p>
-                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">26%</span> &middot; 19 people</p>
                         </div>
                         <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-amber-400 rounded-full" style="width: [PERCENT]%"></div>
+                            <div class="h-full bg-amber-400 rounded-full" style="width: 26%"></div>
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between items-baseline mb-2">
                             <p class="font-semibold text-slate-900">Diabetes range <span class="font-normal text-slate-500 text-sm">(6.5% or higher)</span></p>
-                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
+                            <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">68%</span> &middot; 50 people</p>
                         </div>
                         <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-rose-500 rounded-full" style="width: [PERCENT]%"></div>
+                            <div class="h-full bg-rose-500 rounded-full" style="width: 68%"></div>
                         </div>
                     </div>
                 </div>
                 <p class="text-xs text-slate-400 mt-6">Groups smaller than 10 people are shown as "fewer than 10" to protect privacy.</p>
+                <p class="text-slate-500 mt-8 leading-relaxed">
+                    In all, 69 of the 74 people tested (93%) had an A1C in the prediabetes or diabetes range, and 35 (47%) were above 8.0%, well into the diabetes range. Most of the people tested were men in their 50s and 60s.
+                </p>
             </div>
 
             <!-- Newly identified vs. already knew: remove "hidden" when the totals are ready.
