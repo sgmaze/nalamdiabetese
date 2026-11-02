@@ -93,8 +93,8 @@
                         <p class="text-sm text-slate-500 mt-1 font-medium">2026</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Soon</p>
-                        <p class="text-sm text-slate-500 mt-1 font-medium">In Prediabetes or Diabetes Range</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">84%</p>
+                        <p class="text-sm text-slate-500 mt-1 font-medium">A1C 6.0% or Higher</p>
                     </div>
                     <div>
                         <p class="text-3xl sm:text-4xl font-extrabold text-emerald-600">Free</p>
@@ -114,18 +114,54 @@
                     What We Found
                 </h2>
                 <p class="mt-4 text-lg text-slate-500">
-                    A1C shows average blood sugar over the past 2&ndash;3 months. A screening result is not a diagnosis, so we report ranges and refer people to a doctor to confirm.
+                    A1C shows average blood sugar over the past 2&ndash;3 months. A screening result is not a diagnosis, so we report ranges. A doctor needs to confirm any high result.
                 </p>
             </div>
 
-            <!-- Results coming soon: delete this box when the totals are ready -->
-            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center mb-12">
-                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <!-- Headline numbers: these use the lab's cutoffs (6.0, 7.0, 8.0), and each bar
+                 counts everyone at or above that level. When the recount by A1C range is in,
+                 delete this block and the note below, and fill in the range blocks instead. -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-slate-900 mb-6">Headline Numbers</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-baseline gap-4 mb-2">
+                            <p class="font-semibold text-slate-900">A1C 6.0% or higher <span class="font-normal text-slate-500 text-sm">(prediabetes range or above)</span></p>
+                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">84%</span> &middot; 62 people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-amber-400 rounded-full" style="width: 84%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline gap-4 mb-2">
+                            <p class="font-semibold text-slate-900">Above 7.0% <span class="font-normal text-slate-500 text-sm">(diabetes range)</span></p>
+                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">59%</span> &middot; 44 people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-rose-400 rounded-full" style="width: 59%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-baseline gap-4 mb-2">
+                            <p class="font-semibold text-slate-900">Above 8.0% <span class="font-normal text-slate-500 text-sm">(well into the diabetes range)</span></p>
+                            <p class="text-sm text-slate-500 whitespace-nowrap"><span class="font-bold text-slate-900">47%</span> &middot; 35 people</p>
+                        </div>
+                        <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
+                            <div class="h-full bg-rose-600 rounded-full" style="width: 47%"></div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Results coming soon</h3>
-                <p class="text-slate-500 max-w-xl mx-auto">
-                    We're still adding up the results from this camp. Check back soon for the breakdown.
+                <p class="text-slate-500 mt-8 leading-relaxed">
+                    Most of the 74 people tested were men in their 50s and 60s. The camp was open to everyone, including people who already knew they had diabetes, so these numbers don't show how many people in the community have diabetes without knowing it.
+                </p>
+            </div>
+
+            <!-- Breakdown coming soon: delete this note with the headline block above -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 mb-12">
+                <p class="text-slate-600">
+                    <span class="font-semibold text-slate-900">Full breakdown coming soon.</span>
+                    We're counting results by the standard A1C ranges, and how many people learned for the first time that their blood sugar was high.
                 </p>
             </div>
 
