@@ -52,7 +52,7 @@ html {
 
 /* Gradient text helper */
 .text-gradient {
-  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  background: linear-gradient(135deg, #0090d8 0%, #78c000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,7 +81,7 @@ html {
 
 /* Active nav link */
 .nav-active {
-  color: #047857 !important;
+  color: #1860a8 !important;
   position: relative;
 }
 
@@ -92,6 +92,6 @@ html {
   left: 0;
   right: 0;
   height: 2px;
-  background: #047857;
+  background: #1860a8;
   border-radius: 1px;
 }
