@@ -10,6 +10,13 @@
       tailwind.config = {
         theme: {
           extend: {
+            colors: {
+              // Brand blues taken from the logo (#0090d8 ring, #1878c0 lettering, #1860a8 dark blue)
+              brand: {
+                50: '#eef7fd', 100: '#d9edfa', 200: '#b5daf3', 300: '#84c1ea', 400: '#3fa3e0',
+                500: '#0090d8', 600: '#1878c0', 700: '#1860a8', 800: '#164f8a', 900: '#143f6e', 950: '#0c2747',
+              },
+            },
             fontFamily: {
               sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
@@ -31,15 +38,15 @@
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
                     <img src="logo.png" alt="Nalam Diabetes Foundation" class="h-[67px] w-[67px] md:h-[80px] md:w-[80px] object-contain">
-                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Foundation</span>
+                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-brand-800 tracking-tight">Nalam Diabetes Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Home</a>
-                    <a href="camps.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Camps</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">About</a>
-                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Our Work</a>
-                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors shadow-sm">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Home</a>
+                    <a href="camps.html" class="nav-active text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Camps</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors shadow-sm">
                         Get Involved
                     </a>
                 </nav>
@@ -52,12 +59,12 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
-                <a href="camps.html" class="block text-sm font-medium text-emerald-700 py-2.5 px-3 rounded-lg bg-emerald-50">Camps</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors mt-2">Get Involved</a>
+                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="camps.html" class="block text-sm font-medium text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Camps</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors mt-2">Get Involved</a>
             </div>
         </div>
     </header>
@@ -65,11 +72,11 @@
     <!-- Page Hero -->
     <section class="bg-slate-900 pt-28 pb-16 lg:pt-36 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <a href="camps.html" class="inline-flex items-center text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors mb-6">
+            <a href="camps.html" class="inline-flex items-center text-sm font-medium text-slate-400 hover:text-brand-400 transition-colors mb-6">
                 <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                 All camps
             </a>
-            <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">June 2026 &middot; Coimbatore, Tamil Nadu</p>
+            <p class="text-sm font-semibold text-lime-400 uppercase tracking-wider mb-3">June 2026 &middot; Coimbatore, Tamil Nadu</p>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 Camp 1
             </h1>
@@ -85,19 +92,19 @@
             <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 sm:p-8">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-700">40</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-brand-700">40</p>
                         <p class="text-sm text-slate-500 mt-1 font-medium">People Tested</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-700">June</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-brand-700">June</p>
                         <p class="text-sm text-slate-500 mt-1 font-medium">2026</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-700">Soon</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-brand-700">Soon</p>
                         <p class="text-sm text-slate-500 mt-1 font-medium">In Prediabetes or Diabetes Range</p>
                     </div>
                     <div>
-                        <p class="text-3xl sm:text-4xl font-extrabold text-emerald-700">Free</p>
+                        <p class="text-3xl sm:text-4xl font-extrabold text-brand-700">Free</p>
                         <p class="text-sm text-slate-500 mt-1 font-medium">A1C Test for Everyone</p>
                     </div>
                 </div>
@@ -109,7 +116,7 @@
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Results</p>
+                <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Results</p>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     What We Found
                 </h2>
@@ -119,12 +126,12 @@
             </div>
 
             <!-- Results coming soon: delete this box when the totals are ready -->
-            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center mb-12">
-                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="bg-brand-50 border border-brand-200 rounded-2xl p-8 text-center mb-12">
+                <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 mb-2">Results coming soon</h3>
-                <p class="text-slate-500 max-w-xl mx-auto">
+                <p class="text-slate-600 max-w-xl mx-auto">
                     We're still adding up the results from this camp. Check back soon for the breakdown.
                 </p>
             </div>
@@ -140,7 +147,7 @@
                             <p class="text-sm text-slate-500"><span class="font-bold text-slate-900">[PERCENT]%</span> &middot; [NUMBER] people</p>
                         </div>
                         <div class="h-4 bg-slate-100 rounded-full overflow-hidden" aria-hidden="true">
-                            <div class="h-full bg-emerald-500 rounded-full" style="width: [PERCENT]%"></div>
+                            <div class="h-full bg-green-500 rounded-full" style="width: [PERCENT]%"></div>
                         </div>
                     </div>
                     <div>
@@ -191,24 +198,24 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                    <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Follow-up</p>
+                    <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Follow-up</p>
                     <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">What Happened Next</h2>
                     <p class="text-slate-600 leading-relaxed">
                         We're writing up the referrals and follow-up from this camp. Check back soon.
                     </p>
                 </div>
                 <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                    <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Partners</p>
+                    <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Partners</p>
                     <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">Who Helped</h2>
                     <ul class="space-y-3 text-slate-600">
                         <li><span class="font-semibold text-slate-900">Laboratory and clinic services:</span> Dr. Vijay Lab, Coimbatore, Tamil Nadu</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
-                    <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Team</p>
+                    <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Team</p>
                     <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">Who Ran It</h2>
                     <p class="text-slate-600 leading-relaxed">
-                        Run by the student founders of Nalam Diabetes Foundation. <a href="team.html" class="text-emerald-700 font-medium hover:text-emerald-800">Meet the team</a>.
+                        Run by the student founders of Nalam Diabetes Foundation. <a href="team.html" class="text-brand-700 font-medium hover:text-brand-800">Meet the team</a>.
                     </p>
                 </div>
             </div>
@@ -218,13 +225,13 @@
     <!-- Lessons Learned -->
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Reflection</p>
+            <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Reflection</p>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
                 Lessons Learned
             </h2>
             <ul class="space-y-4">
                 <li class="flex gap-4 items-start bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
-                    <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <svg class="w-5 h-5 text-brand-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     <p class="text-slate-600">The team is writing up what we learned from this camp. Check back soon.</p>
                 </li>
             </ul>
@@ -235,7 +242,7 @@
          sheets, and no identifiable participants without written consent. -->
     <section class="py-16 lg:py-20 bg-slate-50">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Photos</p>
+            <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Photos</p>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">
                 At the Camp
             </h2>
@@ -246,15 +253,15 @@
     </section>
 
     <!-- Thank You -->
-    <section class="py-16 lg:py-20 bg-gradient-to-br from-emerald-700 to-teal-800">
+    <section class="py-16 lg:py-20 bg-gradient-to-br from-brand-700 to-sky-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
                 Thank You
             </h2>
-            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p class="text-lg text-brand-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
                 Thank you to Dr. Vijay Lab, the community, volunteers and donors who made Camp 1 possible.
             </p>
-            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-brand-800 font-semibold rounded-full hover:bg-brand-50 transition-all shadow-lg text-sm">
                 Help Fund the Next Camp
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -277,18 +284,18 @@
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="camps.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Camps</a></li>
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="camps.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Camps</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
-                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-brand-400 text-sm transition-colors flex items-center gap-2">
                                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 nalamdiabetictrust@gmail.com
                             </a>

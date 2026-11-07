@@ -10,6 +10,13 @@
       tailwind.config = {
         theme: {
           extend: {
+            colors: {
+              // Brand blues taken from the logo (#0090d8 ring, #1878c0 lettering, #1860a8 dark blue)
+              brand: {
+                50: '#eef7fd', 100: '#d9edfa', 200: '#b5daf3', 300: '#84c1ea', 400: '#3fa3e0',
+                500: '#0090d8', 600: '#1878c0', 700: '#1860a8', 800: '#164f8a', 900: '#143f6e', 950: '#0c2747',
+              },
+            },
             fontFamily: {
               sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
@@ -31,15 +38,15 @@
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
                     <img src="logo.png" alt="Nalam Diabetes Foundation" class="h-[67px] w-[67px] md:h-[80px] md:w-[80px] object-contain">
-                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Foundation</span>
+                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-brand-800 tracking-tight">Nalam Diabetes Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Home</a>
-                    <a href="camps.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Camps</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">About</a>
-                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Our Work</a>
-                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors shadow-sm">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Home</a>
+                    <a href="camps.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Camps</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">About</a>
+                    <a href="programs.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors shadow-sm">
                         Get Involved
                     </a>
                 </nav>
@@ -52,27 +59,27 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
-                <a href="camps.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Camps</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors mt-2">Get Involved</a>
+                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="camps.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Camps</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors mt-2">Get Involved</a>
             </div>
         </div>
     </header>
 
     <!-- Page Hero -->
-    <section class="bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-900 pt-28 pb-16 lg:pt-36 lg:pb-20 relative overflow-hidden">
+    <section class="bg-gradient-to-br from-brand-900 via-brand-800 to-sky-900 pt-28 pb-16 lg:pt-36 lg:pb-20 relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl"></div>
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-300 uppercase tracking-wider mb-3">Get Involved</p>
+            <p class="text-sm font-semibold text-lime-400 uppercase tracking-wider mb-3">Get Involved</p>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 Make a Difference
             </h1>
-            <p class="text-lg text-emerald-100/80 max-w-2xl leading-relaxed">
+            <p class="text-lg text-brand-100/80 max-w-2xl leading-relaxed">
                 Every contribution &mdash; big or small &mdash; helps us bring free diabetes prevention to the communities of Coimbatore that need it most.
             </p>
         </div>
@@ -82,16 +89,16 @@
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Support Us</p>
+                <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Support Us</p>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Ways You Can Help
                 </h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Donate -->
-                <div class="card-hover bg-gradient-to-b from-emerald-50 to-white border border-emerald-100 rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="card-hover bg-gradient-to-b from-brand-50 to-white border border-brand-100 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
@@ -99,7 +106,7 @@
                     <p class="text-slate-600 text-base leading-relaxed mb-6">
                         Your donation directly funds free A1C testing, educational materials, and camp operations. Every dollar goes toward making preventive healthcare accessible.
                     </p>
-                    <a href="mailto:nalamdiabetictrust@gmail.com?subject=Donation%20Inquiry" class="inline-flex items-center px-6 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors">
+                    <a href="mailto:nalamdiabetictrust@gmail.com?subject=Donation%20Inquiry" class="inline-flex items-center px-6 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors">
                         Donate Now
                     </a>
                 </div>
@@ -141,7 +148,7 @@
     <section class="py-16 lg:py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Your Impact</p>
+                <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Your Impact</p>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Where Your Support Goes
                 </h2>
@@ -151,8 +158,8 @@
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    <div class="w-12 h-12 bg-brand-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                     </div>
                     <h4 class="font-bold text-slate-900 mb-1">A1C Tests</h4>
                     <p class="text-slate-500 text-xs">Free blood sugar screening for community members</p>
@@ -186,7 +193,7 @@
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center">
-                <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Contact</p>
+                <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Contact</p>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
                     Get in Touch
                 </h2>
@@ -196,10 +203,10 @@
                 <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                     <div class="space-y-6">
                         <div class="flex items-center justify-center gap-3 text-slate-700">
-                            <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-5 h-5 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             </div>
-                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-lg font-medium hover:text-emerald-700 transition-colors">
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-lg font-medium hover:text-brand-700 transition-colors">
                                 nalamdiabetictrust@gmail.com
                             </a>
                         </div>
@@ -212,7 +219,7 @@
                     </div>
                     <div class="border-t border-slate-200 mt-8 pt-8">
                         <p class="text-sm text-slate-500 mb-4">Send us a message directly:</p>
-                        <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 bg-emerald-700 text-white font-semibold rounded-full hover:bg-emerald-800 transition-colors shadow-sm text-sm">
+                        <a href="mailto:nalamdiabetictrust@gmail.com" class="inline-flex items-center px-8 py-3.5 bg-brand-700 text-white font-semibold rounded-full hover:bg-brand-800 transition-colors shadow-sm text-sm">
                             <svg class="mr-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             Email Us
                         </a>
@@ -238,18 +245,18 @@
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="camps.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Camps</a></li>
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="camps.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Camps</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
-                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-brand-400 text-sm transition-colors flex items-center gap-2">
                                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 nalamdiabetictrust@gmail.com
                             </a>

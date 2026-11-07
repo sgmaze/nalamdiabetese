@@ -10,6 +10,13 @@
       tailwind.config = {
         theme: {
           extend: {
+            colors: {
+              // Brand blues taken from the logo (#0090d8 ring, #1878c0 lettering, #1860a8 dark blue)
+              brand: {
+                50: '#eef7fd', 100: '#d9edfa', 200: '#b5daf3', 300: '#84c1ea', 400: '#3fa3e0',
+                500: '#0090d8', 600: '#1878c0', 700: '#1860a8', 800: '#164f8a', 900: '#143f6e', 950: '#0c2747',
+              },
+            },
             fontFamily: {
               sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             }
@@ -31,15 +38,15 @@
             <div class="flex items-center justify-between py-2">
                 <a href="index.html" class="flex items-center gap-4">
                     <img src="logo.png" alt="Nalam Diabetes Foundation" class="h-[67px] w-[67px] md:h-[80px] md:w-[80px] object-contain">
-                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-emerald-800 tracking-tight">Nalam Diabetes Foundation</span>
+                    <span class="text-[1.2rem] md:text-2xl font-extrabold text-brand-800 tracking-tight">Nalam Diabetes Foundation</span>
                 </a>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Home</a>
-                    <a href="camps.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Camps</a>
-                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">About</a>
-                    <a href="programs.html" class="nav-active text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Our Work</a>
-                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-emerald-700 transition-colors">Team</a>
-                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors shadow-sm">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Home</a>
+                    <a href="camps.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Camps</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">About</a>
+                    <a href="programs.html" class="nav-active text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Our Work</a>
+                    <a href="team.html" class="text-sm font-medium text-slate-600 hover:text-brand-700 transition-colors">Team</a>
+                    <a href="get-involved.html" class="inline-flex items-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors shadow-sm">
                         Get Involved
                     </a>
                 </nav>
@@ -52,12 +59,12 @@
         </div>
         <div id="mobile-menu" class="md:hidden border-t border-slate-100 bg-white">
             <div class="px-4 py-4 space-y-1">
-                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
-                <a href="camps.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Camps</a>
-                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
-                <a href="programs.html" class="block text-sm font-medium text-emerald-700 py-2.5 px-3 rounded-lg bg-emerald-50">Our Work</a>
-                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-emerald-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
-                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-emerald-700 text-white text-sm font-semibold rounded-full hover:bg-emerald-800 transition-colors mt-2">Get Involved</a>
+                <a href="index.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Home</a>
+                <a href="camps.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Camps</a>
+                <a href="about.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">About</a>
+                <a href="programs.html" class="block text-sm font-medium text-brand-700 py-2.5 px-3 rounded-lg bg-brand-50">Our Work</a>
+                <a href="team.html" class="block text-sm font-medium text-slate-600 hover:text-brand-700 py-2.5 px-3 rounded-lg hover:bg-slate-50">Team</a>
+                <a href="get-involved.html" class="block text-center px-5 py-2.5 bg-brand-700 text-white text-sm font-semibold rounded-full hover:bg-brand-800 transition-colors mt-2">Get Involved</a>
             </div>
         </div>
     </header>
@@ -65,7 +72,7 @@
     <!-- Page Hero -->
     <section class="bg-slate-900 pt-28 pb-16 lg:pt-36 lg:pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-3">Our Work</p>
+            <p class="text-sm font-semibold text-lime-400 uppercase tracking-wider mb-3">Our Work</p>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 The Nalam Model
             </h1>
@@ -79,7 +86,7 @@
     <section class="py-16 lg:py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Process</p>
+                <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Process</p>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     How It Works
                 </h2>
@@ -90,12 +97,12 @@
             <div class="max-w-3xl mx-auto">
                 <div class="relative">
                     <!-- Vertical line -->
-                    <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-emerald-200 hidden sm:block"></div>
+                    <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-brand-200 hidden sm:block"></div>
 
                     <div class="space-y-10">
                         <!-- Step 1 -->
                         <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">1</div>
+                            <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">1</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
                                 <h3 class="text-lg font-bold text-slate-900 mb-2">Community Outreach</h3>
                                 <p class="text-slate-600 text-base leading-relaxed">
@@ -105,7 +112,7 @@
                         </div>
                         <!-- Step 2 -->
                         <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">2</div>
+                            <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">2</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
                                 <h3 class="text-lg font-bold text-slate-900 mb-2">Free A1C Testing</h3>
                                 <p class="text-slate-600 text-base leading-relaxed">
@@ -115,7 +122,7 @@
                         </div>
                         <!-- Step 3 -->
                         <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">3</div>
+                            <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">3</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
                                 <h3 class="text-lg font-bold text-slate-900 mb-2">Personalized Health Guidance</h3>
                                 <p class="text-slate-600 text-base leading-relaxed">
@@ -125,7 +132,7 @@
                         </div>
                         <!-- Step 4 -->
                         <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">4</div>
+                            <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">4</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
                                 <h3 class="text-lg font-bold text-slate-900 mb-2">Data-Driven Follow-up</h3>
                                 <p class="text-slate-600 text-base leading-relaxed">
@@ -135,7 +142,7 @@
                         </div>
                         <!-- Step 5 -->
                         <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-emerald-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">5</div>
+                            <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm relative z-10">5</div>
                             <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm flex-1">
                                 <h3 class="text-lg font-bold text-slate-900 mb-2">Trend Analysis & Reporting</h3>
                                 <p class="text-slate-600 text-base leading-relaxed">
@@ -154,7 +161,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16">
                 <div class="text-center">
-                    <p class="text-sm font-semibold text-emerald-700 uppercase tracking-wider mb-3">Programs</p>
+                    <p class="text-sm font-semibold text-brand-700 uppercase tracking-wider mb-3">Programs</p>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                         Our Core Programs
                     </h2>
@@ -164,14 +171,14 @@
                 <!-- Program 1 -->
                 <div class="bg-white rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm card-hover">
                     <div class="flex items-start gap-4 mb-6">
-                        <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-7 h-7 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-7 h-7 text-brand-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-slate-900">Free A1C Screening Camps</h3>
-                            <p class="text-emerald-700 text-sm font-medium mt-1"><a href="camps.html" class="hover:text-emerald-800">114 people tested across 2 camps</a></p>
+                            <p class="text-brand-700 text-sm font-medium mt-1"><a href="camps.html" class="hover:text-brand-800">114 people tested across 2 camps</a></p>
                         </div>
                     </div>
                     <p class="text-slate-600 leading-relaxed mb-4">
@@ -179,15 +186,15 @@
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-sm text-slate-600">
-                            <svg class="w-4 h-4 text-emerald-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-4 h-4 text-brand-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span>Gold-standard A1C blood testing</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
-                            <svg class="w-4 h-4 text-emerald-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-4 h-4 text-brand-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span>Vetted local laboratory partnership</span>
                         </li>
                         <li class="flex items-center gap-2 text-sm text-slate-600">
-                            <svg class="w-4 h-4 text-emerald-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <svg class="w-4 h-4 text-brand-700 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                             <span>Completely free for all participants</span>
                         </li>
                     </ul>
@@ -290,15 +297,15 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-16 lg:py-20 bg-gradient-to-br from-emerald-700 to-teal-800">
+    <section class="py-16 lg:py-20 bg-gradient-to-br from-brand-700 to-sky-800">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
                 Help Us Reach More Communities
             </h2>
-            <p class="text-lg text-emerald-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
+            <p class="text-lg text-brand-100/80 mb-10 max-w-xl mx-auto leading-relaxed">
                 Every camp we run, every test we provide, and every life we touch is made possible by supporters like you.
             </p>
-            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-emerald-800 font-semibold rounded-full hover:bg-emerald-50 transition-all shadow-lg text-sm">
+            <a href="get-involved.html" class="inline-flex items-center px-8 py-3.5 bg-white text-brand-800 font-semibold rounded-full hover:bg-brand-50 transition-all shadow-lg text-sm">
                 Support Our Programs
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -321,18 +328,18 @@
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Quick Links</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="camps.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Camps</a></li>
-                        <li><a href="about.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">About Us</a></li>
-                        <li><a href="programs.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Programs</a></li>
-                        <li><a href="team.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Our Team</a></li>
-                        <li><a href="get-involved.html" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors">Get Involved</a></li>
+                        <li><a href="camps.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Camps</a></li>
+                        <li><a href="about.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">About Us</a></li>
+                        <li><a href="programs.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Programs</a></li>
+                        <li><a href="team.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Our Team</a></li>
+                        <li><a href="get-involved.html" class="text-slate-300 hover:text-brand-400 text-sm transition-colors">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold text-sm uppercase tracking-wider text-slate-400 mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
-                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-emerald-400 text-sm transition-colors flex items-center gap-2">
+                            <a href="mailto:nalamdiabetictrust@gmail.com" class="text-slate-300 hover:text-brand-400 text-sm transition-colors flex items-center gap-2">
                                 <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                                 nalamdiabetictrust@gmail.com
                             </a>
