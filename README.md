@@ -48,7 +48,6 @@ This repository contains the foundation's public website: a static, English-only
 ├── get-involved.html           # Get Involved page
 ├── style.css                   # Custom styles
 ├── logo.png                    # Foundation logo
-├── images/                     # Photos used on the pages
 └── CNAME                       # Custom domain for GitHub Pages (do not delete)
 ```
 
