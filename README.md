@@ -48,6 +48,7 @@ This repository contains the foundation's public website: a static, English-only
 ├── get-involved.html           # Get Involved page
 ├── style.css                   # Custom styles
 ├── logo.png                    # Foundation logo
+├── images/                     # Charts and photos used on the pages
 └── CNAME                       # Custom domain for GitHub Pages (do not delete)
 ```
 
@@ -94,8 +95,8 @@ This repo is public, and git keeps every past version of every file. Anything co
 - **One exception: the A1C scatter plot.** A camp page may show one scatter plot of individual A1C results (approved November 2026). This is the only exception: every rule above still applies to everything else on the site. The scatter plot must:
   - be a finished image (PNG, under 300 KB). Never commit the data behind it.
   - have no names, initials, IDs or labels on the dots.
-  - show age in groups (for example 40–49), not exact years, and round A1C to one decimal.
-  - not show village or gender on the same chart.
+  - show only each person's age and A1C, and nothing else about them. In particular, no village or gender on the same chart.
+  - may color the dots by the lab's five A1C categories in its legend. Everywhere else on the site, report the three screening ranges above.
   - have alt text that summarizes what it shows.
 
 ## Contact
