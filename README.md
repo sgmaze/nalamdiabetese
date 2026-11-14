@@ -91,6 +91,12 @@ This repo is public, and git keeps every past version of every file. Anything co
 - **No identifying combinations.** Never combine village, age and result in a way that narrows to a person. Don't publish single readings, such as the highest or lowest A1C at a camp.
 - **Photos.** Founders are minors, so their photos need parent consent. Camp photos must not show readable results, forms or registration sheets. No identifiable participants without written consent.
 - **Stories.** Get written consent and use a first name or a pseudonym.
+- **One exception: the A1C scatter plot.** A camp page may show one scatter plot of individual A1C results (approved November 2026). This is the only exception: every rule above still applies to everything else on the site. The scatter plot must:
+  - be a finished image (PNG, under 300 KB). Never commit the data behind it.
+  - have no names, initials, IDs or labels on the dots.
+  - show age in groups (for example 40–49), not exact years, and round A1C to one decimal.
+  - not show village or gender on the same chart.
+  - have alt text that summarizes what it shows.
 
 ## Contact
 
